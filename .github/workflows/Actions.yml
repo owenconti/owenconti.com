@@ -1,0 +1,55 @@
+name: Build
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    services:
+      mysql:
+        image: mysql:8
+        env:
+          MYSQL_USER: laravel_user
+          MYSQL_PASSWORD: laravel_password
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: laravel_testing
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    name: Build
+    runs-on: ubuntu-latest
+    container: ohseemedia/laravel:80
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '15'
+      - run: composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+      - run: ./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.dist.php --dry-run
+      - run: npm install
+      - run: npm run eslint
+      - run: npm run production
+      - name: Configure application
+        run: |
+          cp .env.ci .env
+          php artisan cache:clear
+          php artisan config:clear
+          php artisan key:generate
+      - run: ./vendor/bin/phpunit --colors=never
+      - name: Upload artifacts
+        uses: actions/upload-artifact@master
+        if: failure()
+        with:
+          name: Logs
+          path: ./storage/logs
+
+  # deploy:
+  #   if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/staging'
+  #   name: Deploy application
+  #   runs-on: ubuntu-latest
+  #   container: ohseemedia/laravel:80
+  #   needs: [build]
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - run: composer install --no-dev --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+  #     - run: ./vendor/bin/vapor env:pull ${{ env.VAPOR_ENV }}
+  #     - run: ./vendor/bin/vapor deploy ${{ env.VAPOR_ENV }}
