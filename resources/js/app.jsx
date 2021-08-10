@@ -1,5 +1,3 @@
-import 'vite/dynamic-import-polyfill';
-
 import React from 'react';
 import { render } from 'react-dom';
 import { App } from '@inertiajs/inertia-react';
