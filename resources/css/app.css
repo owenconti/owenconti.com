@@ -1,3 +1,66 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.input {
+  @apply py-2 px-3 bg-white border-2 border-gray-400 focus:border-accent focus:outline-none rounded;
+}
+
+/*! purgecss start ignore */
+.prose {
+  @apply text-base text-gray-700;
+
+  a {
+    @apply text-accent no-underline hover:underline;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  img {
+    @apply max-w-full shadow-lg;
+  }
+
+  tbody tr {
+    border: none;
+  }
+
+  blockquote {
+    @apply p-4 my-6 mx-0 text-gray-800 bg-gray-100 border-l-8 border-accent;
+
+    p {
+      @apply m-0 p-0;
+    }
+  }
+}
+
+.heading {
+  @apply font-bold text-brand-dark;
+}
+
+@media (min-width: 768px) {
+  blockquote {
+    @apply ml-10;
+  }
+}
+
+html.dark {
+  .prose {
+    @apply text-brand-light;
+
+    h1, h2, h3, h4, h5, h6 {
+      @apply text-brand-light;
+    }
+
+    strong {
+      @apply text-white;
+    }
+
+    blockquote {
+      @apply bg-brand-dark-lighten text-brand-light;
+    }
+  }
+}
+
+/*! purgecss end ignore */

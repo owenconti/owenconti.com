@@ -4,8 +4,125 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbf811b5c8e6c3fbcb39aa72d1a17834",
+    "content-hash": "e93ff4ca001db2c5ff15b235ecc3a130",
     "packages": [
+        {
+            "name": "archtechx/laravel-pages",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/archtechx/laravel-pages.git",
+                "reference": "e9d1cd6fe7a8d104476b509e4ef834dd22bcf6bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/archtechx/laravel-pages/zipball/e9d1cd6fe7a8d104476b509e4ef834dd22bcf6bf",
+                "reference": "e9d1cd6fe7a8d104476b509e4ef834dd22bcf6bf",
+                "shasum": ""
+            },
+            "require": {
+                "archtechx/laravel-seo": "^0.2.2",
+                "illuminate/database": "^8.53",
+                "illuminate/routing": "^8.53",
+                "illuminate/support": "^8.24",
+                "php": "^8.0",
+                "ryangjchandler/orbit": "*"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.9",
+                "pestphp/pest": "^1.2",
+                "pestphp/pest-plugin-laravel": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ArchTech\\Pages\\PagesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ArchTech\\Pages\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Štancl",
+                    "email": "samuel@archte.ch"
+                }
+            ],
+            "description": "Easily add routes to your Laravel app by creating Markdown or Blade files.",
+            "keywords": [
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/archtechx/laravel-pages/issues",
+                "source": "https://github.com/archtechx/laravel-pages/tree/v0.1.0"
+            },
+            "time": "2021-08-06T02:39:42+00:00"
+        },
+        {
+            "name": "archtechx/laravel-seo",
+            "version": "v0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/archtechx/laravel-seo.git",
+                "reference": "157318e61b735011b14808962bf476564f80583b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/archtechx/laravel-seo/zipball/157318e61b735011b14808962bf476564f80583b",
+                "reference": "157318e61b735011b14808962bf476564f80583b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.24",
+                "imliam/laravel-blade-helper": "^1.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "nunomaduro/larastan": "^0.6.10",
+                "orchestra/testbench": "^6.9",
+                "pestphp/pest": "^1.2",
+                "pestphp/pest-plugin-laravel": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ArchTech\\SEO\\SEOServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "ArchTech\\SEO\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Štancl",
+                    "email": "samuel@archte.ch"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/archtechx/laravel-seo/issues",
+                "source": "https://github.com/archtechx/laravel-seo/tree/v0.2.2"
+            },
+            "time": "2021-05-28T15:12:18+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.3",
@@ -937,6 +1054,78 @@
             "time": "2021-06-30T20:03:07+00:00"
         },
         {
+            "name": "imliam/laravel-blade-helper",
+            "version": "v1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imliam/laravel-blade-helper.git",
+                "reference": "38ea95f7db2a99d65fcf3c84b6cbde3f798452df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imliam/laravel-blade-helper/zipball/38ea95f7db2a99d65fcf3c84b6cbde3f798452df",
+                "reference": "38ea95f7db2a99d65fcf3c84b6cbde3f798452df",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^7.0|^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "larapack/dd": "^1.0",
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^5.0|^6.0",
+                "phpunit/phpunit": "^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ImLiam\\BladeHelper\\BladeHelperServiceProvider"
+                    ],
+                    "aliases": {
+                        "BladeHelper": "ImLiam\\BladeHelper\\BladeHelperFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ImLiam\\BladeHelper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Liam Hammett",
+                    "email": "liam@liamhammett.com",
+                    "homepage": "https://liamhammett.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An easier way to define custom Blade directives.",
+            "homepage": "https://github.com/imliam/laravel-blade-helper",
+            "keywords": [
+                "blade",
+                "imliam",
+                "laravel",
+                "laravel-blade-helper"
+            ],
+            "support": {
+                "issues": "https://github.com/imliam/laravel-blade-helper/issues",
+                "source": "https://github.com/imliam/laravel-blade-helper/tree/v1.4.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/imliam",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-03-02T17:42:40+00:00"
+        },
+        {
             "name": "inertiajs/inertia-laravel",
             "version": "v0.3.6",
             "source": {
@@ -1002,16 +1191,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.51.0",
+            "version": "v8.54.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "208d9c0043b4c192a9bb9b15782cc4ec37f28bb0"
+                "reference": "7b88554cd1aeb52b7f82689bf244182e7a81894b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/208d9c0043b4c192a9bb9b15782cc4ec37f28bb0",
-                "reference": "208d9c0043b4c192a9bb9b15782cc4ec37f28bb0",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7b88554cd1aeb52b7f82689bf244182e7a81894b",
+                "reference": "7b88554cd1aeb52b7f82689bf244182e7a81894b",
                 "shasum": ""
             },
             "require": {
@@ -1084,7 +1273,7 @@
                 "illuminate/view": "self.version"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "^3.155",
+                "aws/aws-sdk-php": "^3.186.4",
                 "doctrine/dbal": "^2.6|^3.0",
                 "filp/whoops": "^2.8",
                 "guzzlehttp/guzzle": "^6.5.5|^7.0.1",
@@ -1097,7 +1286,7 @@
                 "symfony/cache": "^5.1.4"
             },
             "suggest": {
-                "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.155).",
+                "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage and SES mail driver (^3.186.4).",
                 "brianium/paratest": "Required to run tests in parallel (^6.0).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.6|^3.0).",
                 "ext-ftp": "Required to use the Flysystem FTP driver.",
@@ -1166,7 +1355,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-07-20T14:38:36+00:00"
+            "time": "2021-08-10T14:25:51+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -3011,6 +3200,119 @@
             "time": "2020-08-18T17:17:46+00:00"
         },
         {
+            "name": "ryangjchandler/git",
+            "version": "v0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ryangjchandler/git.git",
+                "reference": "915d3bf15d25be55f3b3388aa4aba3e67d2caf05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ryangjchandler/git/zipball/915d3bf15d25be55f3b3388aa4aba3e67d2caf05",
+                "reference": "915d3bf15d25be55f3b3388aa4aba3e67d2caf05",
+                "shasum": ""
+            },
+            "require": {
+                "titasgailius/terminal": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "symfony/var-dumper": "^5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RyanChandler\\Git\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Chandler",
+                    "email": "support@ryangjchandler.co.uk",
+                    "homepage": "https://ryangjchandler.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/ryangjchandler/git/issues",
+                "source": "https://github.com/ryangjchandler/git/tree/v0.0.4"
+            },
+            "time": "2021-04-13T20:43:15+00:00"
+        },
+        {
+            "name": "ryangjchandler/orbit",
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ryangjchandler/orbit.git",
+                "reference": "26b61a7c87278db0cf2d6fd679c68c7bcf87f4b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ryangjchandler/orbit/zipball/26b61a7c87278db0cf2d6fd679c68c7bcf87f4b2",
+                "reference": "26b61a7c87278db0cf2d6fd679c68c7bcf87f4b2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/console": "^8.0",
+                "illuminate/database": "^8.0",
+                "illuminate/events": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.4 || ^8.0",
+                "ryangjchandler/git": "^0.0.4",
+                "spatie/yaml-front-matter": "^2.0",
+                "symfony/yaml": "^3.0 || ^4.0 || ^5.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.15",
+                "phpunit/phpunit": "9.4.*",
+                "vimeo/psalm": "^4.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Orbit\\OrbitServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Orbit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Chandler",
+                    "email": "support@ryangjchandler.co.uk",
+                    "homepage": "https://ryangjchandler.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A flat-file database driver for Eloquent.",
+            "support": {
+                "issues": "https://github.com/ryangjchandler/orbit/issues",
+                "source": "https://github.com/ryangjchandler/orbit/tree/v0.9.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ryangjchandler",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-07-02T18:51:28+00:00"
+        },
+        {
             "name": "spatie/once",
             "version": "3.0.1",
             "source": {
@@ -3072,6 +3374,59 @@
                 }
             ],
             "time": "2021-07-04T12:06:29+00:00"
+        },
+        {
+            "name": "spatie/yaml-front-matter",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/yaml-front-matter.git",
+                "reference": "efb5170a92216b8d2f40874301db8eb51b8e73cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/yaml-front-matter/zipball/efb5170a92216b8d2f40874301db8eb51b8e73cc",
+                "reference": "efb5170a92216b8d2f40874301db8eb51b8e73cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "symfony/yaml": "^3.0|^4.0|^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\YamlFrontMatter\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A to the point yaml front matter parser",
+            "homepage": "https://github.com/sebastiandedeyne/yaml-front-matter",
+            "keywords": [
+                "front matter",
+                "jekyll",
+                "spatie",
+                "yaml"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/yaml-front-matter/issues",
+                "source": "https://github.com/spatie/yaml-front-matter/tree/master"
+            },
+            "time": "2019-12-02T20:50:50+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5323,6 +5678,81 @@
             "time": "2021-06-24T08:13:00+00:00"
         },
         {
+            "name": "symfony/yaml",
+            "version": "v5.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7",
+                "reference": "4500fe63dc9c6ffc32d3b1cb0448c329f9c814b7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<4.4"
+            },
+            "require-dev": {
+                "symfony/console": "^4.4|^5.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "bin": [
+                "Resources/bin/yaml-lint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Loads and dumps YAML files",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v5.3.6"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-07-29T06:20:01+00:00"
+        },
+        {
             "name": "tightenco/ziggy",
             "version": "v1.3.5",
             "source": {
@@ -5440,6 +5870,59 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.3"
             },
             "time": "2020-07-13T06:12:54+00:00"
+        },
+        {
+            "name": "titasgailius/terminal",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TitasGailius/terminal.git",
+                "reference": "33396b5128d8fb1ee108bb1b4ed64ba74c85c642"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TitasGailius/terminal/zipball/33396b5128d8fb1ee108bb1b4ed64ba74c85c642",
+                "reference": "33396b5128d8fb1ee108bb1b4ed64ba74c85c642",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/process": "^4.4.2|^5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3",
+                "phpunit/phpunit": "^9.0",
+                "symfony/var-dumper": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TitasGailius\\Terminal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Titas Gailius",
+                    "email": "titas.gailius@gmail.com"
+                }
+            ],
+            "description": "Terminal is an Elegent wrapper around Symfony's Process component.",
+            "keywords": [
+                "bash",
+                "exec",
+                "laravel",
+                "process",
+                "symfony",
+                "terminal"
+            ],
+            "support": {
+                "issues": "https://github.com/TitasGailius/terminal/issues",
+                "source": "https://github.com/TitasGailius/terminal"
+            },
+            "time": "2021-01-24T15:15:06+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

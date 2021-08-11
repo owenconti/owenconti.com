@@ -3,26 +3,27 @@ const config = require('@ohseesoftware/tailwind-config');
 
 module.exports = {
   // https://github.com/tailwindlabs/tailwindcss/issues/4978
-  // mode: 'jit',
+  mode: 'jit',
+
+  darkMode: 'class',
 
   purge: [
     './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
     './storage/framework/views/*.php',
     './resources/views/**/*.blade.php',
-    './resources/js/**/*.jsx',
-    './resources/js/**/*.js'
+    './resources/js/**/*.js',
+    './content/**/*.md'
   ],
 
   theme: {
     extend: {
       colors: {
         ...config.theme.colors,
-        'brand-primary': config.theme.colors['brand-indigo'],
-        'brand-primary-lighten': config.theme.colors['brand-indigo-lighten'],
-        'brand-primary-darken': config.theme.colors['brand-indigo-darken']
+        accent: 'var(--osm-accent)'
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans]
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        heading: ['Inter', ...defaultTheme.fontFamily.sans]
       }
     }
   },
@@ -33,5 +34,5 @@ module.exports = {
     }
   },
 
-  plugins: [require('@tailwindcss/forms')]
+  plugins: [require('@tailwindcss/typography')]
 };

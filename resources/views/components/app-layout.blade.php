@@ -1,0 +1,59 @@
+@php
+  $accentColors = ['#B353FF', '#3B82F6', '#14B8A6', '#FC8800', '#FF1E1E', '#F50A73'];
+  $accentColor = collect($accentColors)->random();
+@endphp
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <x-seo::meta />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+        <!-- Scripts -->
+        @vite(js/app.js)
+
+        <style type="text/css">
+        :root {
+            --osm-accent: {{ $accentColor }};
+        }
+        </style>
+
+        <script type="text/javascript">
+            const $html = document.getElementsByTagName('html')[0];
+
+            const hasPreference = !!localStorage.darkModeEnabled;
+            const preferenceDarkMode = localStorage.darkModeEnabled === 'true';
+            const osDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            const darkMode = hasPreference ? preferenceDarkMode : osDarkMode;
+
+            if (darkMode) {
+                $html.classList.add('dark');
+            } else {
+                $html.classList.remove('dark');
+            }
+        </script>
+    </head>
+    <body class="font-sans text-base antialiased transition-all duration-300 bg-white text-dark dark:bg-brand-dark-darken dark:text-brand-light">
+        <x-header />
+
+        <div class="flex w-full max-w-6xl px-6 mx-auto mt-6">
+            <div class="hidden w-64 lg:w-full lg:max-w-xs md:block">
+                <x-sidebar />
+            </div>
+
+            <div class="flex-1 w-0 max-w-full md:pl-16">
+                {{ $slot }}
+            </div>
+        </div>
+
+
+        <x-footer />
+    </body>
+</html>
