@@ -1,26 +1,17 @@
-# Laravel Project Template
-
 ## Setup
-
-Clone this repo and install dependencies:
 
 - `composer install`
 - `npm install`
+- `cp .env.example .env`
 
-## Setup brand
+## Dev
 
-- Replace SVG logo in `Logo.jsx` file
-- Add SVG favicon to `resources/public/favicon.svg`
-- Set primary brand color in `tailwind.config.js`
+Start vite on localhost:3000
 
-## Environment
+- `npm start` 
 
-Copy the `.env.example` to `.env` and adjust any variables as necessary for your project.
+## Build
 
-### Development
+Build vite production assets:
 
-This project uses Vite for frontend assets. You can start the dev build with:
-
-```
-npm start
-```
+- `npm run production`

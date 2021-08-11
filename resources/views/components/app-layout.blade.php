@@ -40,7 +40,7 @@
             }
         </script>
     </head>
-    <body class="font-sans text-base antialiased transition-all duration-300 bg-white text-dark dark:bg-brand-dark-darken dark:text-brand-light">
+    <body class="font-sans text-base antialiased bg-white text-dark dark:bg-brand-dark-darken dark:text-brand-light">
         <x-header />
 
         <div class="flex w-full max-w-6xl px-6 mx-auto mt-6">
