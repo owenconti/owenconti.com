@@ -13,7 +13,6 @@ class DarkModeToggle extends Component
      */
     public function __construct()
     {
-        //
     }
 
     /**

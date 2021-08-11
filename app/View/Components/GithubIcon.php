@@ -13,7 +13,6 @@ class GithubIcon extends Component
      */
     public function __construct()
     {
-        //
     }
 
     /**

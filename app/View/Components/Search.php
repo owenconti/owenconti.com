@@ -13,7 +13,6 @@ class Search extends Component
      */
     public function __construct()
     {
-        //
     }
 
     /**
