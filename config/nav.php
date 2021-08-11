@@ -2,7 +2,7 @@
 
 return [
     'main' => [
-        ['label' => 'Blog', 'url' => '/blog'],
+        ['label' => 'Articles', 'url' => '/articles'],
         ['label' => 'Bookmarks', 'url' => '/bookmarks'],
         ['label' => 'Analytics', 'url' => '/analytics'],
         ['label' => 'Products', 'url' => 'https://ohseesoftware.com'],

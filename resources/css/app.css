@@ -8,7 +8,7 @@
 
 /*! purgecss start ignore */
 .prose {
-  @apply text-base text-gray-700;
+  @apply text-base text-gray-700 max-w-full;
 
   a {
     @apply text-accent no-underline hover:underline;

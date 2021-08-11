@@ -13,9 +13,9 @@ class ArticleList extends Component
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($articles)
     {
-        $this->articles = \App\Models\Page::where('type', 'post')->get();
+        $this->articles = $articles;
     }
 
     /**
