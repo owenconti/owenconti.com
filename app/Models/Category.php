@@ -20,7 +20,7 @@ class Category extends Model
 
     public function getUrlAttribute()
     {
-        return url("category/{$this->slug}");
+        return url(route('show.category', $this));
     }
 
     public function getKeyName()

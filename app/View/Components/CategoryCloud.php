@@ -2,10 +2,13 @@
 
 namespace App\View\Components;
 
+use App\Models\Category;
 use Illuminate\View\Component;
 
-class Sidebar extends Component
+class CategoryCloud extends Component
 {
+    public $categories;
+
     /**
      * Create a new component instance.
      *
@@ -13,6 +16,7 @@ class Sidebar extends Component
      */
     public function __construct()
     {
+        $this->categories = Category::withCount('pages')->orderBy('pages_count', 'desc')->get();
     }
 
     /**
@@ -22,6 +26,6 @@ class Sidebar extends Component
      */
     public function render()
     {
-        return view('components.sidebar');
+        return view('components.category-cloud');
     }
 }

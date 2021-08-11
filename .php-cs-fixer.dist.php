@@ -5,13 +5,12 @@
 
 $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__)
-    ->exclude(['bootstrap', 'storage', 'vendor'])
+    ->exclude(['bootstrap', 'storage', 'vendor', 'node_modules'])
     ->name('*.php')
     ->name('_ide_helper')
     ->notName('*.blade.php')
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
-
 
 return (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)

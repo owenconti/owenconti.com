@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Sidebar extends Component
+class RssIcon extends Component
 {
     /**
      * Create a new component instance.
@@ -22,6 +22,6 @@ class Sidebar extends Component
      */
     public function render()
     {
-        return view('components.sidebar');
+        return view('components.rss-icon');
     }
 }

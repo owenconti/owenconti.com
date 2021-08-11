@@ -7,9 +7,10 @@ return [
         ['label' => 'Analytics', 'url' => '/analytics'],
         ['label' => 'Products', 'url' => 'https://ohseesoftware.com'],
     ],
-    'footer' => [
-        ['component' => 'YouTube', 'url' => 'https://ohsee.link/youtube'],
-        ['component' => 'Twitter', 'url' => 'https://ohsee.link/twitter'],
-        ['component' => 'GitHub', 'url' => 'https://ohsee.link/github'],
+    'links' => [
+        ['component' => 'youtube-icon', 'label' => 'YouTube', 'url' => 'https://ohsee.link/youtube'],
+        ['component' => 'twitter-icon', 'label' => 'Twitter', 'url' => 'https://ohsee.link/twitter'],
+        ['component' => 'github-icon', 'label' => 'GitHub', 'url' => 'https://ohsee.link/github'],
+        ['component' => 'rss-icon', 'label' => 'RSS', 'url' => '/rss'],
     ],
 ];
