@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PageController;
+
 return [
     'model' => \App\Models\Page::class,
 
@@ -31,6 +33,6 @@ return [
     'routes' => [
         'name' => 'page',
         'prefix' => '',
-        'handler' => ArchTech\Pages\PageController::class,
+        'handler' => PageController::class,
     ],
 ];
