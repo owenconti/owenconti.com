@@ -10,6 +10,6 @@ class ListCategoriesController extends Controller
     {
         $categories = Category::get();
 
-        return view('pages.articles.list', ['categories' => $categories]);
+        return view('pages.categories.list', ['categories' => $categories]);
     }
 }

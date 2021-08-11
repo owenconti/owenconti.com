@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use ArchTech\Pages\Page as BasePage;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Schema\Blueprint;
 
 class Page extends BasePage
@@ -20,6 +21,11 @@ class Page extends BasePage
     public function getUrlAttribute()
     {
         return url($this->slug);
+    }
+
+    public function scopePosts(Builder $query)
+    {
+        $query->where('type', 'post');
     }
 
     public function category()

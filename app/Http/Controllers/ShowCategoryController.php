@@ -8,6 +8,6 @@ class ShowCategoryController extends Controller
 {
     public function __invoke(Category $category)
     {
-        return view('pages.articles.show', ['category' => $category]);
+        return view('pages.categories.show', ['category' => $category]);
     }
 }
