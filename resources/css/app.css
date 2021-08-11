@@ -35,10 +35,6 @@
   }
 }
 
-.heading {
-  @apply font-bold text-brand-dark;
-}
-
 @media (min-width: 768px) {
   blockquote {
     @apply ml-10;

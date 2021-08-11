@@ -43,7 +43,7 @@
     <body class="font-sans text-base antialiased bg-white text-dark dark:bg-brand-dark-darken dark:text-brand-light">
         <x-header />
 
-        <div class="flex w-full max-w-6xl px-6 mx-auto mt-6">
+        <div class="flex w-full max-w-6xl px-4 mx-auto mt-6">
             <div class="hidden w-64 lg:w-full lg:max-w-xs md:block">
                 <x-sidebar />
             </div>
