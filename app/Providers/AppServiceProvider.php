@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $siteTitle = 'Owen Conti';
-        $description = 'Web programming articles including tips, tricks, and tutorials on Laravel, PHP, React, Vue, MySQL and more.';
+        $description = 'Owen Conti\'s personal blog including articles on Laravel, PHP, React, Vue, and MySQL.';
 
         seo()
             ->site("{$siteTitle} - {$description}")

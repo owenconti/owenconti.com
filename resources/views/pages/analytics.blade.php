@@ -1,3 +1,5 @@
+@seo(['title' => 'Analytics'])
+
 <x-app-layout>
     <div class="prose">
         <h1>Analytics</h1>
