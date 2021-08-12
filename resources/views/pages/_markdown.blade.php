@@ -2,8 +2,6 @@
     <div class="prose prose-accent">
         <h1>{{ $page->title }}</h1>
 
-        {{ $page->url}}
-
-        {!! Str::markdown($page->content) !!}
+        {!! $content !!}
     </div>
 </x-app-layout>

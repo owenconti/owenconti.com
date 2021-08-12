@@ -10,6 +10,16 @@
 .prose {
   @apply text-base text-gray-700 max-w-full;
 
+  .torchlight, pre, pre code {
+    @apply font-code text-sm;
+  }
+
+  .torchlight {
+    .line-number {
+      @apply pr-2;
+    }
+  }
+
   a {
     @apply text-accent no-underline hover:underline;
   }

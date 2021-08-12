@@ -23,7 +23,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        heading: ['Inter', ...defaultTheme.fontFamily.sans]
+        heading: ['Inter', ...defaultTheme.fontFamily.sans],
+        code: ['Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
       }
     }
   },
