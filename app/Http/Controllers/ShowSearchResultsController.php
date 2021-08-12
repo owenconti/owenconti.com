@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use ArchTech\Pages\Page;
+use App\Models\Page;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
@@ -12,7 +12,7 @@ class ShowSearchResultsController extends Controller
     {
         $query = $request->input('query', null);
 
-        $articles = Page::where('type', 'post')
+        $articles = Page::posts()
             ->where(function (Builder $builder) use ($query) {
                 $builder->where('title', 'like', '%'.$query.'%')
                     ->orWhere('content', 'like', '%'.$query.'%');

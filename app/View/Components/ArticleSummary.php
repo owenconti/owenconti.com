@@ -2,7 +2,7 @@
 
 namespace App\View\Components;
 
-use ArchTech\Pages\Page;
+use App\Models\Page;
 use Illuminate\View\Component;
 
 class ArticleSummary extends Component
