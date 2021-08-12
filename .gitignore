@@ -18,3 +18,5 @@ yarn-error.log
 /.idea
 /.vscode
 /.php-cs-fixer.cache
+.vapor
+.env.production
