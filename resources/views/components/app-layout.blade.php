@@ -13,7 +13,7 @@
         <x-seo::meta />
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://rsms.me/inter/inter.css">
 
         <link rel="icon" href="{{ asset('/favicon.svg') }}" sizes="any" type="image/svg+xml" />
         <link rel="icon" href="{{ asset('/favicon.png') }}" type="image/png" />
