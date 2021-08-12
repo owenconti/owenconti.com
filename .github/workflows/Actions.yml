@@ -48,6 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     container: ohseemedia/laravel:80
     needs: [build]
+    env:
+      VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - run: composer install --no-dev --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
