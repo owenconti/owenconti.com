@@ -22,10 +22,15 @@
 
   a {
     @apply text-accent no-underline hover:underline;
+
+    &.heading-permalink {
+      @apply text-gray-200 absolute hover:text-gray-300 transform -translate-x-full pr-2;
+    }
   }
 
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-bold relative;
   }
 
   img {
