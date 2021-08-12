@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d7ca3ef82a138efe4a946576c56b227",
+    "content-hash": "92a3219f472a23fdb5ed50de171d2a88",
     "packages": [
         {
             "name": "archtechx/laravel-pages",
@@ -3099,65 +3099,6 @@
                 }
             ],
             "time": "2021-07-02T08:32:20+00:00"
-        },
-        {
-            "name": "ohseesoftware/laravel-schema-list",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ohseesoftware/laravel-schema-list.git",
-                "reference": "b94dbd67ae3852ab37520fd8f9555d928a54895a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ohseesoftware/laravel-schema-list/zipball/b94dbd67ae3852ab37520fd8f9555d928a54895a",
-                "reference": "b94dbd67ae3852ab37520fd8f9555d928a54895a",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": ">=7.0",
-                "illuminate/database": ">=7.0",
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^5.0",
-                "phpunit/phpunit": "^8.0",
-                "squizlabs/php_codesniffer": "*"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "OhSeeSoftware\\LaravelSchemaList\\LaravelSchemaListServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "OhSeeSoftware\\LaravelSchemaList\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Owen Conti",
-                    "email": "owen@ohseemedia.com"
-                }
-            ],
-            "description": "List tables, columns, and indices for your database connections.",
-            "homepage": "https://github.com/ohseesoftware/laravel-schema-list",
-            "keywords": [
-                "laravel-schema-list",
-                "ohseesoftware"
-            ],
-            "support": {
-                "issues": "https://github.com/ohseesoftware/laravel-schema-list/issues",
-                "source": "https://github.com/ohseesoftware/laravel-schema-list/tree/v1.3.0"
-            },
-            "time": "2021-01-11T01:58:46+00:00"
         },
         {
             "name": "ohseesoftware/laravel-vite-manifest",
