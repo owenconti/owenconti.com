@@ -16,4 +16,8 @@
     <p class="mt-8 text-base text-center text-gray-700 dark:text-gray-400">
         &copy; Owen Conti. All rights reserved.
     </p>
+
+    @env('production')
+        <script src="https://albatross.ohseesoftware.com/script.js" site="NOPHTZSW" defer></script>
+    @endenv
 </footer>
