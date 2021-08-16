@@ -3,7 +3,7 @@
 
     <div class="flex flex-wrap mt-2">
         @foreach($links as $link)
-            <a href="{{ $link['url'] }}" class="inline-flex items-center p-2 mb-2 mr-2 text-sm font-bold text-white rounded bg-accent hover:underline">
+            <a href="{{ $link['url'] }}" class="inline-flex items-center p-2 mb-2 mr-2 text-sm font-bold text-white rounded rounded-tl-none rounded-br-none bg-accent hover:underline">
                 <x-dynamic-component :component="$link['component']" class="w-4 h-4 mr-2" />
                 {{ $link['label'] }}
             </a>

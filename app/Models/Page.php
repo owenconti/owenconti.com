@@ -15,6 +15,7 @@ class Page extends BasePage
         $table->longText('content');
         $table->text('excerpt')->nullable();
         $table->string('type');
+        $table->string('video')->nullable();
         $table->string('category_slug')->nullable();
     }
 

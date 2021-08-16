@@ -15,19 +15,24 @@
   }
 
   .torchlight {
+    @apply bg-none;
+
     .line-number {
       @apply pr-2;
     }
   }
 
-  a {
-    @apply text-accent no-underline hover:underline;
-
-    &.heading-permalink {
-      @apply text-gray-200 absolute hover:text-gray-300 transform -translate-x-full pr-2;
-    }
+  code {
+    @apply text-accent;
   }
 
+  a {
+    @apply text-brand-dark font-bold underline hover:text-brand-dark-darken;
+
+    &.heading-permalink {
+      @apply hidden text-gray-200 absolute no-underline hover:underline hover:text-gray-300 transform -translate-x-full pr-2;
+    }
+  }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold relative;
@@ -51,8 +56,14 @@
 }
 
 @media (min-width: 768px) {
-  blockquote {
-    @apply ml-10;
+  .prose {
+    blockquote {
+      @apply ml-10;
+    }
+
+    a.heading-permalink {
+      @apply block;
+    }
   }
 }
 
@@ -62,6 +73,22 @@ html.dark {
 
     h1, h2, h3, h4, h5, h6 {
       @apply text-brand-light;
+    }
+
+    a {
+      @apply text-brand-light hover:text-brand-light-darken;
+
+      &.heading-permalink {
+        @apply text-gray-600 hover:text-gray-700;
+      }
+    }
+
+    code {
+      @apply bg-brand-light px-1 py-0.5 rounded;
+
+      &.torchlight {
+        @apply bg-transparent;
+      }
     }
 
     strong {

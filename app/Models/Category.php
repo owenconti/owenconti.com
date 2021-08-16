@@ -35,6 +35,6 @@ class Category extends Model
 
     public function pages()
     {
-        return $this->hasMany(Page::class, 'category_slug', 'slug');
+        return $this->hasMany(Page::class, 'category_slug', 'slug')->orderBy('created_at', 'desc');
     }
 }

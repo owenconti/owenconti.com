@@ -1,4 +1,4 @@
-<footer class="py-8 mt-8 border-t-4 border-accent">
+<footer class="py-8 mt-12 border-t-4 border-accent">
     <nav class="px-4 space-x-4 text-center md:spacing-x-8">
         @foreach($nav['main'] as $item)
             <a href="{{ $item['url'] }}" class="text-base font-bold text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100 hover:underline">{{ $item['label'] }}</a>

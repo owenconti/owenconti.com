@@ -1,5 +1,5 @@
 <header v-scope="Header()" class="w-full border-t-4 border-accent">
-    <div class="w-full max-w-6xl px-4 mx-auto">
+    <div class="w-full max-w-6xl px-6 mx-auto">
         <div class="flex items-center justify-between py-6 md:justify-between md:space-x-10">
             <a href="/" class="flex items-center justify-between">
                 <x-logo class="h-14" />

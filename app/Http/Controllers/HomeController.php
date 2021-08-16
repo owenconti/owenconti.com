@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function __invoke()
     {
-        $pages = Page::posts()->paginate();
+        $pages = Page::posts()->orderBy('created_at', 'desc')->paginate();
 
         return view('pages.pages.list', ['pages' => $pages]);
     }
