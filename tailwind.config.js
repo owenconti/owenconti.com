@@ -25,6 +25,9 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         heading: ['Inter', ...defaultTheme.fontFamily.sans],
         code: ['Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
+      },
+      blur: {
+        xxs: '1px'
       }
     }
   },

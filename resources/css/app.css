@@ -17,6 +17,23 @@
   .torchlight {
     @apply bg-none;
 
+    &.has-focus-lines {
+      .line {
+        font-size: 0.85rem;
+        @apply filter blur-xxs;
+
+        &:not() {
+          text-shadow: none;
+          font-size: inherit;
+          @apply opacity-60;
+        }
+
+        &.line-focus {
+          @apply blur-none;
+        }
+      }
+    }
+
     .line-number {
       @apply pr-2;
     }

@@ -7,21 +7,19 @@ use App\Http\Controllers\ShowOgImageController;
 use App\Http\Controllers\ShowSearchResultsController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['middleware' => 'cache.headers:public;max_age=3600;s_maxage=86400'], function () {
-    Route::feeds();
+Route::feeds();
 
-    Route::redirect('/category', '/articles');
-    Route::redirect('/blog', '/articles');
-    Route::redirect('/rss', '/feed');
+Route::redirect('/category', '/articles');
+Route::redirect('/blog', '/articles');
+Route::redirect('/rss', '/feed');
 
-    Route::get('/', HomeController::class);
-    Route::get('/articles', ListCategoriesController::class)->name('list.categories');
-    Route::get('/articles/{category}', ShowCategoryController::class)->name('show.category');
-    Route::get('/search', ShowSearchResultsController::class);
-    Route::get('/og-image', ShowOgImageController::class);
+Route::get('/', HomeController::class);
+Route::get('/articles', ListCategoriesController::class)->name('list.categories');
+Route::get('/articles/{category}', ShowCategoryController::class)->name('show.category');
+Route::get('/search', ShowSearchResultsController::class);
+Route::get('/og-image', ShowOgImageController::class);
 
-    Route::get('/{page}', config('pages.routes.handler'))
-        ->where('page', '.*')
-        ->prefix(config('pages.routes.prefix'))
-        ->name(config('pages.routes.name'));
-});
+Route::get('/{page}', config('pages.routes.handler'))
+    ->where('page', '.*')
+    ->prefix(config('pages.routes.prefix'))
+    ->name(config('pages.routes.name'));
