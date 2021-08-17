@@ -5,8 +5,8 @@ namespace App\Models;
 use ArchTech\Pages\Page as BasePage;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Schema\Blueprint;
-use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
+use Spatie\Feed\Feedable;
 
 class Page extends BasePage implements Feedable
 {
@@ -50,6 +50,11 @@ class Page extends BasePage implements Feedable
     public function scopeInCategory(Builder $query, $category)
     {
         $query->where('category_slug', $category);
+    }
+
+    public function isPost(): bool
+    {
+        return $this->type === 'post';
     }
 
     public function category()

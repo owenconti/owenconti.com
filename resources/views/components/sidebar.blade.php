@@ -1,6 +1,6 @@
 <div>
     <x-search />
-    @if ($page ?? null)
+    @if (isset($page) && $page->isPost())
         <x-related-articles :page="$page" />
     @endif
     <x-category-cloud />

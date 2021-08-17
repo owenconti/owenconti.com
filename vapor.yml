@@ -2,6 +2,7 @@ id: 23444
 name: owenconticom
 environments:
     production:
+        domain: owenconti.com
         network: ohseesoftware-network
         cache: ohseesoftware-cache
         memory: 1024
