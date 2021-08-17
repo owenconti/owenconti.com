@@ -31,7 +31,7 @@ class PageController
                 ->image('https://snaps-proxy.owenconti.workers.dev?w=1200&h=632&dpi=2&url=https://owenconti.com/og-image/?data='.base64_encode(json_encode([
                     'title' => $model->title,
                     'excerpt' => $model->excerpt,
-                    'category' => $model->category->title,
+                    'category' => $model->category?->title ?? null,
                     'date' => $model->created_at->format('M d, Y'),
                 ])));
 
