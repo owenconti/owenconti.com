@@ -1,6 +1,6 @@
 @seo([
     'title' => 'Analytics',
-    'image' => 'https://snaps-proxy.owenconti.workers.dev?w=1200&h=632&dpi=2&url=https://owenconti.com/og-image/?data='.base64_encode(json_encode(['title' => 'Analytics']))
+    'image' => 'https://snaps-proxy.owenconti.workers.dev?w=1200&h=632&dpi=2&url=https://owenconti.com/og-image/?data='.base64_encode(json_encode(['title' => 'Analytics', 'date' => now()->format('M d, Y')]))
 ])
 
 <x-app-layout>

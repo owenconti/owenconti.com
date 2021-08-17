@@ -34,6 +34,6 @@ class AppServiceProvider extends ServiceProvider
             ->description($description)
             ->withUrl()
             ->twitterSite('owenconti')
-            ->image('https://snaps-proxy.owenconti.workers.dev?w=1200&h=632&dpi=2&url=https://owenconti.com/og-image/?data='.base64_encode(json_encode(['title' => 'Owen Conti'])));
+            ->image('https://snaps-proxy.owenconti.workers.dev?w=1200&h=632&dpi=2&url=https://owenconti.com/og-image/?data='.base64_encode(json_encode(['title' => 'Owen Conti', 'date' => now()->format('M d, Y')])));
     }
 }

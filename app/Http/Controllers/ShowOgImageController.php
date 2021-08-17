@@ -8,7 +8,7 @@ class ShowOgImageController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $data = base64_decode(json_decode($request->input('data')), true);
+        $data = json_decode(base64_decode($request->input('data'), true), true);
 
         return view('pages.og-image', $data);
     }
