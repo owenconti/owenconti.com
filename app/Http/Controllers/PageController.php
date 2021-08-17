@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\VaporAssetWrapping;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
@@ -30,8 +31,9 @@ class PageController
 
             $content = $this->generateContent($model->content);
 
+            View::share('page', $model);
+
             return view(config('pages.views.markdown'), [
-                'page' => $model,
                 'content' => $content,
             ]);
         }

@@ -29,6 +29,11 @@ class Page extends BasePage
         $query->where('type', 'post');
     }
 
+    public function scopeInCategory(Builder $query, $category)
+    {
+        $query->where('category_slug', $category);
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_slug');

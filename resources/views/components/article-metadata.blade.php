@@ -1,7 +1,9 @@
 <div {{ $attributes->merge(['class' => 'mt-2 text-sm text-gray-700 flex items-center dark:text-gray-300']) }}>
     <p>
-        <time datetime="2021-08-03">{{ $article->created_at->format('M d, Y') }}</time>
-        under <a href="{{ $article->category->url }}" class="font-bold text-gray-800 dark:text-white hover:underline">{{ $article->category->title }}</a> 
+        <time datetime="2021-08-03">{{ $article->updated_at->format('M d, Y') }}</time>
+        @if($article->category)
+            under <a href="{{ $article->category->url }}" class="font-bold text-gray-800 dark:text-white hover:underline">{{ $article->category->title }}</a> 
+        @endif
     </p>
 
     @if ($article->video)

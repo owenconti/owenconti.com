@@ -1,0 +1,4 @@
+---
+slug: statamic
+title: Statamic
+---

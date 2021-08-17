@@ -2,7 +2,7 @@
     <div class="space-y-12">
         @foreach($categories as $category)
             <div>
-                <h3 class="text-lg font-light text-gray-700 uppercase dark:text-gray-300">
+                <h3 class="text-base text-gray-700 dark:text-gray-300">
                     <a href="{{ route('show.category', $category) }}" class="hover:underline">
                         {{ $category->title }}
                     </a>
