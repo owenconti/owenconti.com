@@ -5,8 +5,8 @@ namespace App\Models;
 use ArchTech\Pages\Page as BasePage;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Schema\Blueprint;
-use Spatie\Feed\FeedItem;
 use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 
 class Page extends BasePage implements Feedable
 {
