@@ -5,9 +5,27 @@ namespace App\Models;
 use ArchTech\Pages\Page as BasePage;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Schema\Blueprint;
+use Spatie\Feed\FeedItem;
+use Spatie\Feed\Feedable;
 
-class Page extends BasePage
+class Page extends BasePage implements Feedable
 {
+    public function toFeedItem(): FeedItem
+    {
+        return FeedItem::create()
+            ->id($this->slug)
+            ->title($this->title)
+            ->summary($this->excerpt)
+            ->updated($this->updated_at)
+            ->link($this->url)
+            ->authorName('Owen Conti');
+    }
+
+    public static function getAllFeedItems()
+    {
+        return Page::posts()->get();
+    }
+
     public static function schema(Blueprint $table)
     {
         $table->string('slug');

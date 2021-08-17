@@ -11,6 +11,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <x-seo::meta />
+        <x-feed-links />
 
         <!-- Fonts -->
         <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://rsms.me/inter/inter.css">
