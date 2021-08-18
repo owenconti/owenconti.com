@@ -19,19 +19,25 @@
 
         <p>Hopefully you found this article useful! If you did, share it on Twitter!</p>
 
-        <div class="flex items-center space-x-4">
-            <a
-                href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-                class="twitter-share-button"
-                data-size="large"
-                data-related="owenconti"
-                data-show-count="false"
-                data-text="{{ $page->title }} by @owenconti"
-            >Share this article on Twitter</a>
+        <div class="flex flex-wrap items-center">
+            <div class="inline-block mb-2 mr-2">
+                <a
+                    href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                    class="twitter-share-button"
+                    data-size="large"
+                    data-related="owenconti"
+                    data-show-count="false"
+                    data-text="{{ $page->title }} by @owenconti"
+                >Share this article on Twitter</a>
+            </div>
             
-            <a href="https://twitter.com/owenconti?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @owenconti</a>
+            <div class="inline-block mb-2 mr-2">
+                <a href="https://twitter.com/owenconti?ref_src=twsrc%5Etfw" class="inline-block mb-4 mr-4 twitter-follow-button" data-size="large" data-show-count="false">Follow @owenconti</a>
+            </div>
 
-            <a href="https://twitter.com/messages/compose?recipient_id=40687266&ref_src=twsrc%5Etfw" class="twitter-dm-button" data-size="large" data-screen-name="owenconti" data-show-count="false">Message @owenconti</a>
+            <div class="inline-block mb-2 mr-2">
+                <a href="https://twitter.com/messages/compose?recipient_id=40687266&ref_src=twsrc%5Etfw" class="inline-block twitter-dm-button" data-size="large" data-screen-name="owenconti" data-show-count="false">Message @owenconti</a>
+            </div>
 
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>

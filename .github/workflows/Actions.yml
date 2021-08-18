@@ -54,6 +54,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: composer install --no-dev --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
       - run: ./vendor/bin/vapor env:pull production
+      - run: cp .env.production .env
       - run: ./vendor/bin/vapor deploy production
       - name: Purge Cloudflare cache
         uses: jakejarvis/cloudflare-purge-action@master
