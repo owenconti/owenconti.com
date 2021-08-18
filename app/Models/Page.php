@@ -5,15 +5,15 @@ namespace App\Models;
 use ArchTech\Pages\Page as BasePage;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Schema\Blueprint;
-use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
+use Spatie\Feed\Feedable;
 
 class Page extends BasePage implements Feedable
 {
     protected static function booted()
     {
         static::addGlobalScope('published', function (Builder $builder) {
-            $builder->where('draft', false);
+            $builder->whereNull('draft');
         });
     }
 
@@ -42,7 +42,7 @@ class Page extends BasePage implements Feedable
         $table->string('type');
         $table->string('video')->nullable();
         $table->string('category_slug')->nullable();
-        $table->boolean('draft')->default(false);
+        $table->boolean('draft')->nullable()->default(false);
     }
 
     public function getUrlAttribute()
