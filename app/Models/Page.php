@@ -10,6 +10,13 @@ use Spatie\Feed\FeedItem;
 
 class Page extends BasePage implements Feedable
 {
+    protected static function booted()
+    {
+        static::addGlobalScope('published', function (Builder $builder) {
+            $builder->where('draft', false);
+        });
+    }
+
     public function toFeedItem(): FeedItem
     {
         return FeedItem::create()
@@ -35,6 +42,7 @@ class Page extends BasePage implements Feedable
         $table->string('type');
         $table->string('video')->nullable();
         $table->string('category_slug')->nullable();
+        $table->boolean('draft')->default(false);
     }
 
     public function getUrlAttribute()
