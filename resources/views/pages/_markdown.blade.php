@@ -19,7 +19,7 @@
 
         <p>Hopefully you found this article useful! If you did, share it on Twitter!</p>
 
-        <div class="flex items-center space-x-4">
+        <div class="flex flex-wrap items-center space-x-4">
             <a
                 href="https://twitter.com/share?ref_src=twsrc%5Etfw"
                 class="twitter-share-button"
