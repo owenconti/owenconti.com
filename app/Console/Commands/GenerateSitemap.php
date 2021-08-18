@@ -35,18 +35,18 @@ class GenerateSitemap extends Command
             ->add(
                 Url::create('/')
                     ->setLastModificationDate(now())
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
                     ->setPriority(1.0)
             )
             ->add(
                 Url::create('/analytics')
                     ->setLastModificationDate(now())
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
             )
             ->add(
                 Url::create('/articles')
                     ->setLastModificationDate(now())
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
                     ->setPriority(0.9)
             );
 
@@ -54,7 +54,7 @@ class GenerateSitemap extends Command
             $sitemap->add(
                 Url::create($page->url)
                     ->setLastModificationDate($page->updated_at)
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
             );
         });
 
@@ -62,7 +62,7 @@ class GenerateSitemap extends Command
             $sitemap->add(
                 Url::create($category->url)
                     ->setLastModificationDate($category->pages()->orderBy('updated_at', 'desc')->first()->updated_at)
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
             );
         });
 
