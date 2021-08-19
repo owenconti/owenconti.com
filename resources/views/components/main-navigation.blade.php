@@ -11,7 +11,6 @@
     @endforeach
 </nav>
 
-<div v-if="isOpen" class="fixed inset-0 bg-transparent" @click="isOpen = false"></div>
 <div v-cloak class="inset-x-0 top-0 z-10 mt-6 transition origin-top-right transform md:hidden" :class="{ 'absolute' : isOpen , 'hidden' : !isOpen}" >
     <div class="relative bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-brand-dark divide-gray-50">
         <div class="px-5 pt-5 pb-6">
