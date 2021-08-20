@@ -52,7 +52,7 @@
                 <x-sidebar />
             </div>
 
-            <div class="flex-1 w-0 max-w-full md:pl-10">
+            <div class="flex-1 w-0 max-w-full md:pl-20">
                 {{ $slot }}
             </div>
         </div>

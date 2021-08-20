@@ -1,5 +1,5 @@
 @if($relatedArticles->count())
-  <div class="mt-8">
+  <div {{ $attributes->merge(['class' => 'mt-8']) }}>
     <x-article-list :articles="$relatedArticles" />
   </div>
 @endif
