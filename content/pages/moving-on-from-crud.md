@@ -1,6 +1,6 @@
 ---
 slug: posts/moving-on-from-crud
-title: 'Moving On From CRUD'
+title: 'Moving on from CRUD'
 type: post
 draft: true
 updated_at: 2021-08-18
