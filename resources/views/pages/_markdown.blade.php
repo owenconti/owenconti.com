@@ -41,5 +41,7 @@
 
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
+
+        <p>Found an issue with the article? <a href="https://github.com/owenconti/owenconti.com/blob/main/content/pages/{{ substr($page->slug, strrpos($page->slug, '/') + 1) }}.md">Submit your edits</a> against the repository.</p> 
     </div>
 </x-app-layout>
