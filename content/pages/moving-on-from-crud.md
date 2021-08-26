@@ -1,6 +1,6 @@
 ---
 slug: posts/moving-on-from-crud
-title: 'Moving on from CRUD'
+title: 'Moving on From CRUD'
 category_slug: laravel
 type: post
 draft: true
@@ -8,9 +8,11 @@ updated_at: 2021-08-18
 created_at: 2021-08-18
 ---
 
+This article will go over a new naming pattern you can use for files in your web applications. While we'll mainly reference Laravel terminology, the patterns can be applied to any web framework.
+
 Before we begin, please review and confirm you agree with the following points. If you don't agree with these points, this article may not be for you.
 
-- DX to find a piece of code is top priority
+- Developer experience (DX) to find a piece of code is top priority
   - Devs should never have to use global search to find code
   - Devs should never have to use the file explorer to find code
   - Any dev you ask on your team should give you the same answer when asked which file X piece of code is in
@@ -44,7 +46,7 @@ Counting the files involved, specifically for the endpoint, we have:
 - The resource or view
 - The feature tests
 
-Out of those 4 files, the only one that would normally be reused across endpoints is the resource/view, ie: you may have a `UserResource` returned from an endpoint that cretes a user and returned from an endpoint that lists users.
+Out of those 4 files, the only one that would normally be reused across endpoints is the resource/view, ie: you may have a `UserResource` returned from an endpoint that creates a user, and returned from an endpoint that lists users.
 
 So we have 3, maybe 4 files, all related to the same request. The traditional approach to structuring these files would be:
 
