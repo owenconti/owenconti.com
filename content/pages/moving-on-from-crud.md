@@ -3,6 +3,7 @@ slug: posts/moving-on-from-crud
 title: 'Moving on From CRUD'
 category_slug: laravel
 type: post
+excerpt: CRUD-based naming for web applications works, but there's a better way using Single Action Controllers and VerbSubjectType naming patterns.
 updated_at: 2021-08-18
 created_at: 2021-08-18
 ---
