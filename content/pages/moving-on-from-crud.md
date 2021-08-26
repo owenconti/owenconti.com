@@ -3,7 +3,6 @@ slug: posts/moving-on-from-crud
 title: 'Moving on From CRUD'
 category_slug: laravel
 type: post
-draft: true
 updated_at: 2021-08-18
 created_at: 2021-08-18
 ---
