@@ -1,6 +1,7 @@
 ---
 slug: posts/moving-on-from-crud
 title: 'Moving on from CRUD'
+category_slug: laravel
 type: post
 draft: true
 updated_at: 2021-08-18
@@ -16,11 +17,13 @@ Before we begin, please review and confirm you agree with the following points. 
   - These points will mean devs will not get frustrated while looking for something in the code base
 - Smaller files are easier to read, parse, understand, and edit. There's less to manage in your head when files are smaller.
 - Patterns should be defined, documented, and enforced
-  - The entire premise of this article only works if the patterns you define for your team are followed. This article will show you a very simple pattern that is hard to get wrong.
+  - The entire premise of this article only works if the patterns you define for your team are followed. This article will show you a very simple pattern that is hard to get wrong.
 
 ## CRUD Review
 
-CRUD stands for Create, Read, Update, Delete. It was coined by X in 1983. Think back to 1983, what types of applications were being built back then? I would argue that applications we build today look and function nothing like the ones built in 1983. Sure, there's some similarities, but most of the applications being built today are much more advanced than they were back then.
+CRUD stands for Create, Read, Update, Delete. It was coined by [James Martin in 1983](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete). Think back to 1983, what types of applications were being built back then? I would argue that applications we build today look and function nothing like the ones built in 1983. Sure, there's some similarities, but most of the applications being built today are much more advanced than they were back then.
+
+We can expand on CRUD to make naming in our application simple.
 
 ## Web Request Review
 
@@ -65,14 +68,14 @@ The devs on your team could manage their way around this. They'd need to use sea
 
 Let's run through some hypotheticals using the above example request:
 
-- You now need to implement all 7 CRUD (index, show, create, post, update, destroy, restore) methods for the User resource
+- You now need to implement all 8 CRUD (index, show, create, post, edit, update, destroy, restore) methods for the User resource
   - The controller is now 100s of lines. Good luck finding what you're looking for via a file name. At best, you can open the controller and then scroll or search within the file.
 - Every endpoint you write should have at least 3 tests:
   - A happy test for a 200 response
   - A test for invalid data
   - A test for unauthorized users
-  - We now have at least 21 tests covering 7 endpoints written in our `UserTests` class. Again, good luck finding what you're looking for.
-- We need to add another endpoint that isn't a typical CRUD method. Let's stay this endpoint is used to sync users to an external service.
+  - We now have at least 20+ tests covering 8 endpoints written in our `UserTests` class. Again, good luck finding what you're looking for.
+- We need to add another endpoint that isn't a typical CRUD method. Let's say this endpoint is used to sync users to an external service.
   - Where does this new logic go?
   - Do we add a new method to the `UserController`? We could, but now our controllers are breaking their CRUD pattern.
   - We could add a `SyncUsersController`. This feels weird because now we have a single controller breaking the CRUD pattern and what would we name the method in the controller?
