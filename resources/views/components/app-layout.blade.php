@@ -27,22 +27,6 @@
             --osm-accent: {{ $accentColor }};
         }
         </style>
-
-        <script type="text/javascript">
-            const $html = document.getElementsByTagName('html')[0];
-
-            const hasPreference = !!localStorage.darkModeEnabled;
-            const preferenceDarkMode = localStorage.darkModeEnabled === 'true';
-            const osDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-            const darkMode = hasPreference ? preferenceDarkMode : osDarkMode;
-
-            if (darkMode) {
-                $html.classList.add('dark');
-            } else {
-                $html.classList.remove('dark');
-            }
-        </script>
     </head>
     <body class="font-sans text-base antialiased bg-white text-dark dark:bg-brand-dark-darken dark:text-brand-light">
         <x-header />
