@@ -20,7 +20,7 @@ return [
              */
             'url' => '/feed',
 
-            'title' => 'Articles on owenconti.com',
+            'title' => 'Owen Conti',
             'description' => 'Owen Conti\'s personal blog including articles on Laravel, PHP, React, Vue, and MySQL.',
             'language' => 'en-US',
 

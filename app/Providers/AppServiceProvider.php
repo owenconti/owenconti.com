@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
         $description = 'Owen Conti\'s personal blog including articles on Laravel, PHP, React, Vue, and MySQL.';
 
         seo()
-            ->site("{$siteTitle} - {$description}")
+            ->site($siteTitle)
             ->title(
                 default: $siteTitle,
                 modify: fn (string $title) => "{$title} | {$siteTitle}"
