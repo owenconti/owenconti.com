@@ -156,6 +156,6 @@ Starting to see the pattern? What about the _ease_ of the naming? The names make
 
 TLDR; Use single action controllers and name your files via a naming pattern of: `{Verb}{Subject}{Type}`, which corresponds to the single responsibility of the file.
 
-After reading this article, I hope you're ready to re-consider how you structure/name your Laravel (or other web framework) files. It took me months of a friend trying to convince me on this pattern, but once I adopted it, I've never looked back.
+After reading this article, I hope you're ready to re-consider how you structure/name your Laravel (or other web framework) files. It took [Jeff Sagal](https://twitter.com/sagalbot) months to convince me on this pattern, but once I adopted it, I've never looked back.
 
 
