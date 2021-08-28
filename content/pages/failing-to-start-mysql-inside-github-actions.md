@@ -1,5 +1,5 @@
 ---
-slug: posts/temporary-relationship-trait-for-laravel
+slug: posts/failing-to-start-mysql-inside-github-actions
 title: 'Failing to start MySQL inside GitHub Actions'
 type: post
 category_slug: laravel
