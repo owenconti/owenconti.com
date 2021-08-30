@@ -20,7 +20,7 @@
     "laravel/vapor-core": "^2.12",
     "league/commonmark": "^1.5",
     "lorisleiva/laravel-actions": "^2.1",
-    "ohseesoftware/laravel-vite-manifest": "^1.1",
+    "ohseesoftware/laravel-vite-manifest": "^1.2",
     "spatie/laravel-feed": "^4.0",
     "spatie/laravel-sitemap": "^6.0",
     "spatie/once": "^3.0",
