@@ -1,6 +1,6 @@
 ---
 slug: posts/copying-heroku-environment-variables-across-projects
-title: 'Copying Heroku Environment Variables Across Projects
+title: 'Copying Heroku Environment Variables Across Projects'
 type: post
 category_slug: devops
 excerpt: 'Here\'s two quick commands you can use to copy Heroku environment variables across projects using the Heroku CLI.'
