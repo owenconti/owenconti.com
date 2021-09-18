@@ -8,7 +8,7 @@ updated_at: 2021-09-13
 created_at: 2021-09-13
 ---
 
-This article assumes you have the Heroku CLI installed and setup: https://devcenter.heroku.com/articles/heroku-cli
+This article assumes you have the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed and setup.
 
 ## Copying Heroku config to local file
 
