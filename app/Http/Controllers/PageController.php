@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
 use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
+use League\CommonMark\Extension\TableOfContents\TableOfContentsExtension;
 use Torchlight\Commonmark\TorchlightExtension;
 
 class PageController
@@ -53,7 +54,8 @@ class PageController
         $environment = Environment::createCommonMarkEnvironment()
             ->addExtension(new TorchlightExtension())
             ->addExtension(new VaporAssetWrapping())
-            ->addExtension(new HeadingPermalinkExtension());
+            ->addExtension(new HeadingPermalinkExtension())
+            ->addExtension(new TableOfContentsExtension());
 
         $environment->mergeConfig([
             'heading_permalink' => [

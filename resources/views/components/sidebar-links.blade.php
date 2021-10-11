@@ -1,4 +1,4 @@
-<div class="pt-6 mt-6 border-t-4 border-gray-300">
+<div class="pt-6 mt-6 border-t-4 border-gray-300 dark:border-gray-700">
     <h3 class="text-xl font-bold">Links</h3>
 
     <div class="flex flex-wrap mt-2">

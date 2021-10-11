@@ -70,6 +70,30 @@
       @apply m-0 p-0;
     }
   }
+
+  .table-of-contents {
+    @apply mb-8 pb-4 border-b border-gray-300;
+
+    &::before {
+      content: 'Quick links';
+      @apply font-bold text-gray-900;
+    }
+
+    li {
+      @apply pl-5;
+
+      p, ul {
+        @apply m-0;
+      }
+    }
+
+    a {
+      @apply font-medium no-underline;
+      &:hover {
+        @apply underline;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -114,6 +138,14 @@ html.dark {
 
     blockquote {
       @apply bg-brand-dark-lighten text-brand-light;
+    }
+
+    .table-of-contents {
+      @apply border-gray-700;
+
+      &::before {
+        @apply text-gray-100;
+      }
     }
   }
 }
