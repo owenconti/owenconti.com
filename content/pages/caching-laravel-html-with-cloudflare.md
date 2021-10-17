@@ -43,7 +43,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\EncryptCookies::class, // [tl! remove]
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class, // [tl! remove]
             \Illuminate\Session\Middleware\StartSession::class, // [tl! remove]
-            // \Illuminate\Session\Middleware\AuthenticateSession::class, // [tl! remove]
+            \Illuminate\Session\Middleware\AuthenticateSession::class, // [tl! remove]
             \Illuminate\View\Middleware\ShareErrorsFromSession::class, // [tl! remove]
             \App\Http\Middleware\VerifyCsrfToken::class, // [tl! remove]
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
@@ -62,6 +62,6 @@ You can validate this by checking the response headers of the HTML response:
 
 ```php
 cache-control: public, max-age=3600, s-maxage=86400
-cf-cache-status: HIT // [tl! focus]
+cf-cache-status: HIT // [tl! highlight]
 cf-ray: 6803f1964956e472-SEA
 ```
