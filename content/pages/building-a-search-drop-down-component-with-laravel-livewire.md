@@ -92,8 +92,8 @@ Blade view:
         wire:model="query"
         wire:keydown.escape="reset"
         wire:keydown.tab="reset"
-        wire:keydown.ArrowUp="decrementHighlight"
-        wire:keydown.ArrowDown="incrementHighlight"
+        wire:keydown.arrow-up="decrementHighlight"
+        wire:keydown.arrow-down="incrementHighlight"
         wire:keydown.enter="selectContact"
     />
 
