@@ -20,6 +20,14 @@ Once you've setup your new Slack app, create a new webhook URL and copy it your 
 
 We'll need to take the webhook URL that's copied to your clipboard and add it as a new environment variable. I like to call the environment variable `LOGSLACKWEBHOOK_URL`, but you can name it whatever you like:
 
+```bash
+// .env
+
+LOG_SLACK_WEBHOOK_URL=https://hooks.slack.com/services/XXXXXX
+```
+
+The last configuration step is creating the new log channel. Open up the `logging.php` file. We'll want to copy the exiting `slack` channel and create a new one:
+
 ```php
 <?php
 
@@ -40,15 +48,6 @@ return [
         'level' => 'info'
     ]
 ];
-```
-
-
-The last configuration step is creating the new log channel. Open up the `logging.php` file. We'll want to copy the exiting `slack` channel and create a new one:
-
-```bash
-// .env
-
-LOG_SLACK_WEBHOOK_URL=https://hooks.slack.com/services/XXXXXX
 ```
 
 Note that we changed the `level` from "error" to "info". That will allow any log message with an INFO level or above to be sent to the Slack channel.
