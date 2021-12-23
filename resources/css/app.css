@@ -15,7 +15,7 @@
   }
 
   .torchlight {
-    @apply p-0 block min-h-full;
+    @apply p-1 block min-h-full;
     background: none !important;
     min-width: -webkit-max-content;
     min-width: -moz-max-content;

@@ -26,18 +26,18 @@ import { ref } from 'vue';
 
 const count = ref(0);
 </script>
-```
 
-```vue
 // Parent component
 <template>
   <ChildComponent ref="countComponent" />
 </template>
 
 <script setup>
-const countComponent = ref(null); // the `countComponent` ref will be the instance of the `ChildComponent`
+// the `countComponent` ref will be the instance of the `ChildComponent`
+const countComponent = ref(null); 
 
-console.log('Current count: ', countComponent.value.count); // This will not work because `ChildComponent` is not exposing `count`
+ // This will not work because `ChildComponent` is not exposing `count`
+console.log('Current count: ', countComponent.value.count)
 </script>
 ```
 
@@ -51,17 +51,17 @@ import { ref, defineExpose } from 'vue';
 const count = ref(0);
 defineExpose({ count });
 </script>
-```
 
-```vue
 // Parent component
 <template>
   <ChildComponent ref="countComponent" />
 </template>
 
 <script setup>
-const countComponent = ref(null); // the `countComponent` ref will be the instance of the `ChildComponent`
+// the `countComponent` ref will be the instance of the `ChildComponent`
+const countComponent = ref(null);
 
-console.log('Current count: ', countComponent.value.count); // This will now output 0
+// This will now output 0
+console.log('Current count: ', countComponent.value.count);
 </script>
 ```
