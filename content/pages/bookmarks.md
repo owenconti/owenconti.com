@@ -2,7 +2,7 @@
 slug: bookmarks
 title: 'Bookmarks'
 type: page
-updated_at: 2021-05-19T19:09:02+00:00
+updated_at: 2022-02-04
 created_at: 2021-05-19T19:09:02+00:00
 ---
 
@@ -17,6 +17,12 @@ Login link for the AWS Console
 Used to automatically post webmentions from Twitter to my website.
 
 [https://brid.gy](https://brid.gy)
+
+## Calendar Syncing
+
+Automatically sync events across calendars, auto-blocking off my time.
+
+[https://calenderio.com/](https://calenderio.com/)
 
 ## Cloudcraft
 
