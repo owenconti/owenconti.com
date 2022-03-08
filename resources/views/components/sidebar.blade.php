@@ -1,5 +1,4 @@
 <div>
-    <x-calenderio-ad />
     <x-search />
     @if (isset($page) && $page->isPost())
         <x-related-articles :page="$page" class="text-sm" />

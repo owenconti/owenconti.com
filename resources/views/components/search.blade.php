@@ -1,4 +1,4 @@
-<form method="GET" action="/search" {{ $attributes->merge(['class' => 'mt-8 flex items-center']) }}>
+<form method="GET" action="/search" {{ $attributes->merge(['class' => 'flex items-center']) }}>
     <input type="text" name="query" class="w-full bg-white input dark:bg-brand-dark" placeholder="Search...">
     <button type="submit"
         class="w-5 h-5 -ml-8 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-500">
