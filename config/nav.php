@@ -5,7 +5,6 @@ return [
         ['label' => 'Articles', 'url' => '/articles'],
         ['label' => 'Bookmarks', 'url' => '/bookmarks'],
         ['label' => 'Analytics', 'url' => '/analytics'],
-        ['label' => 'Products', 'url' => 'https://ohseesoftware.com'],
     ],
     'links' => [
         ['component' => 'youtube-icon', 'label' => 'YouTube', 'url' => 'https://ohsee.link/youtube'],

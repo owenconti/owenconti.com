@@ -1,6 +1,6 @@
 ---
 slug: posts/how-i-use-calenderio-to-block-time-and-reconcile-my-calendars
-title: 'How I use Calenderio to block time and reconcile my Calendars'
+title: 'How I use Calenderio to block time and reconcile my calendars'
 type: post
 category_slug: tips
 excerpt: 'Calenderio saves me time every day by automatically syncing my events and reconciling my calendars for me.'
