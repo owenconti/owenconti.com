@@ -80,6 +80,8 @@ To generate fake data using the workflow, you can use type `faker {field}`, the 
 
 ## GitHub
 
+[https://github.com/gharlan/alfred-github-workflow](https://github.com/gharlan/alfred-github-workflow)
+
 If you're a GitHub user (especially for work) this workflow makes opening GitHub repos super easy.
 
 To open a GitHub repo, type `gh {repo}`:
