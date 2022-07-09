@@ -1,3 +1,7 @@
+## Generating a new article
+
+Run the artisan command `php artisan make:article {slug}` to generate a new article.
+
 ## Setup
 
 - `composer install`
