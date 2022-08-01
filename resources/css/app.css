@@ -72,6 +72,10 @@
 
     p {
       @apply m-0 p-0;
+
+      &:first-of-type::before, &:first-of-type::after {
+        content: '';
+      }
     }
   }
 

@@ -8,6 +8,12 @@ updated_at: 1628098577
 created_at: 2021-02-21
 ---
 
+> **Stop, please read this before continuing!**
+>
+> As of Laravel 9.19, Laravel uses Vite to compile assets with official support. If you're using a Laravel version above 9.19, please do not use this guide and instead follow the official [Laravel documentation](https://laravel.com/docs/9.x/vite#introduction).
+>
+> This article was written before Laravel had official support for Vite.
+
 In this guide, we'll replace Laravel Mix with Vite in a Laravel Jetstream (Inertia/Vue) application.
 
 [Vite](https://vitejs.dev/) is a build tool created by Evan You (creator of Vue) which utilizes the availability of native ES modules in the browser. Read more about Vite on the [Why Vite page](https://vitejs.dev/guide/why.html).
@@ -20,9 +26,7 @@ If you want to get up and running right away, consider using the [Laravel Vite p
 
 ### TLDR; extended (Vue 3)
 
-> Note: Vite recommends **not** omitting file extensions for custom import types, ie: `.vue` files.
-> 
-> [https://vitejs.dev/config/#resolve-extensions](https://vitejs.dev/config/#resolve-extensions)
+> Vite recommends **not** omitting file extensions for custom import types, ie: `.vue` files. [https://vitejs.dev/config/#resolve-extensions](https://vitejs.dev/config/#resolve-extensions)
 > 
 > This means you should ensure all of your imports use the `.vue` extension throughout your codebase.
 
