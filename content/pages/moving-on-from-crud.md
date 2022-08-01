@@ -99,7 +99,7 @@ I'm going to start with single action controllers. The premise is simple: you ha
 
 Laravel has built-in support for single action controllers, I'll defer to the [Laravel documentation](https://laravel.com/docs/8.x/controllers#single-action-controllers) for you to review. In short, you make a new controller like normal, but instead of worrying about what to name the method, you use PHP's magic `__invoke` method. When registering the route, you pass the controller class without defining a method and Laravel automatically calls the `__invoke` method on the controller for you.
 
-Right away, we've taken away a naming decision for the developer. No more worrying about what to name mehtods in the controller. 
+Right away, we've taken away a naming decision for the developer. No more worrying about what to name methods in the controller. 
 
 ## Naming Convention for Files
 
