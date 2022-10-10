@@ -21,6 +21,16 @@
     min-width: -moz-max-content;
     min-width: max-content;
 
+    &::after {
+      content: 'Code highlighting by torchlight.dev';
+      display: block;
+      clear: both;
+      font-size: 10px;
+      font-style: italic;
+      opacity: 0.3;
+      padding-top: 0.25rem;
+    }
+
     &.has-focus-lines {
       .line {
         font-size: 0.85rem;
