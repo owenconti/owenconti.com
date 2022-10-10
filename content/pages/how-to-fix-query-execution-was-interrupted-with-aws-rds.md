@@ -3,7 +3,7 @@ slug: posts/how-to-fix-query-execution-was-interrupted-with-aws-rds
 title: 'How To Fix Query Execution Was Interrupted With AWS Rds'
 type: post
 category_slug: devops
-excerpt:
+excerpt: '"Query execution was interrupted" can sometimes be solved by increasing the storage size of your database.'
 updated_at: 2022-10-09
 created_at: 2022-10-09
 ---
