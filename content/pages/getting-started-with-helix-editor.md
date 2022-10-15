@@ -31,3 +31,59 @@ you could write a keymap to run tests directly from the editor.
 
 Here's a list of common commands that I run, mostly for me to use as a reference guide.
 
+## Custom commands
+
+### Opening lazygit
+
+While transition to Helix, I'm also going to try a text-based Git client, [lazygit](https://github.com/jesseduffield/lazygit).
+
+Although there is a rendering issue with Helix after closing lazygit, I have a created a custom keymap to open lazygit:
+
+```
+[keys.normal]
+l = { g = ":sh lazygit" }
+```
+
+### Save and close buffer
+
+This keymap allows you to save and close the buffer with two keypresses:
+
+```
+[keys.normal]
+l = { w = [":w", ":bc"] }
+```
+
+### Close buffer without saving
+
+This keymap will close the buffer without saving:
+
+```
+[keys.normal]
+l = { q = ":bc!" }
+```
+
+## Full Helix config
+
+Here's my full current Helix config file. I'll try to keep it updated!
+
+```
+theme = "bogster"
+
+[editor]
+line-number = "relative"
+mouse = false
+auto-format = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+ignore = true
+git-ignore = false
+
+[keys.normal]
+l = { g = ":sh lazygit", q = ":bc!", w = [":w", ":bc"] }
+```
