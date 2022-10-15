@@ -1,3 +1,7 @@
+# owenconti.com
+
+Repository for the [owenconti.com](https://owenconti.com) website.
+
 ## Generating a new article
 
 Run the artisan command `php artisan make:article {slug}` to generate a new article.
