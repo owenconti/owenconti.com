@@ -36,6 +36,12 @@ The easiest way to get started with PostgreSQL, MySQL, Redis & more.
 
 [https://dbngin.com/](https://dbngin.com/)
 
+## Helix Editor
+
+A terminal-based text editor I am trying out!
+
+[https://helix-editor.com](https://helix-editor.com)
+
 ## JSON Formatter
 
 JSON formatting from the TablePlus team.
