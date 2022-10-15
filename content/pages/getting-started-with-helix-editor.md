@@ -35,7 +35,7 @@ Here's a list of common commands that I run, mostly for me to use as a reference
 
 ### Opening lazygit
 
-While transition to Helix, I'm also going to try a text-based Git client, [lazygit](https://github.com/jesseduffield/lazygit).
+While transitioning to Helix, I'm also going to try a text-based Git client, [lazygit](https://github.com/jesseduffield/lazygit).
 
 Although there is a rendering issue with Helix after closing lazygit, I have a created a custom keymap to open lazygit:
 
