@@ -19,4 +19,4 @@ Where:
 - `original_env` is the name of the environment you are pulling the backup from
 - `backup_id` is the ID of the backup, found on the Durability tab of the Heroku Postgres database page
 - `DATABASE_URL` is the env var that Heroku generated for the new database
-- `new_env` is the new application ID that has the `DATABASE_URL` attached to ti
+- `new_env` is the new application ID that has the `DATABASE_URL` attached to it
