@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 const config = require('@ohseesoftware/tailwind-config');
 
 module.exports = {
@@ -19,7 +20,13 @@ module.exports = {
     extend: {
       colors: {
         ...config.theme.colors,
-        accent: 'var(--osm-accent)'
+        accent: 'var(--osm-accent)',
+        'brand-light-lighten': colors.coolGray[100],
+        'brand-light': colors.coolGray[200],
+        'brand-light-darken': colors.coolGray[300],
+        'brand-dark-lighten': colors.coolGray[700],
+        'brand-dark': colors.coolGray[800],
+        'brand-dark-darken': colors.coolGray[900]
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

@@ -54,7 +54,11 @@
   }
 
   code {
-    @apply text-accent;
+    @apply text-accent px-2 py-0.5 font-normal;
+
+    &::before, &::after {
+        @apply hidden;
+    }
   }
 
   a {
@@ -143,7 +147,7 @@ html.dark {
     }
 
     code {
-      @apply bg-brand-light rounded;
+      @apply bg-brand-dark-lighten text-brand-light rounded;
     }
 
     strong {

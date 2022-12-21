@@ -3,7 +3,6 @@
 return [
     'main' => [
         ['label' => 'Articles', 'url' => '/articles'],
-        ['label' => 'Bookmarks', 'url' => '/bookmarks'],
         ['label' => 'Analytics', 'url' => '/analytics'],
     ],
     'links' => [

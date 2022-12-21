@@ -1,8 +1,3 @@
-@php
-$accentColors = ['#B353FF', '#3B82F6', '#14B8A6', '#FC8800', '#FF1E1E', '#F50A73'];
-$accentColor = collect($accentColors)->random();
-@endphp
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
