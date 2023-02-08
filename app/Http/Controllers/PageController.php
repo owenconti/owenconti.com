@@ -32,7 +32,7 @@ class PageController
 
         seo()
             ->title($model->title)
-            ->description($model->excerpt ?? Str::limit($model->content, 100))
+            ->description(addslashes($model->excerpt ?? Str::limit($model->content, 100)))
             ->image('https://snaps-proxy.owenconti.workers.dev?w=1200&h=632&dpi=2&url=https://owenconti.com/og-image/?data='.base64_encode(json_encode([
                 'title' => $model->title,
                 'excerpt' => $model->excerpt,
