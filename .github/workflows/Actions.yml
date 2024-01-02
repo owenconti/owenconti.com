@@ -17,12 +17,25 @@ jobs:
 
     name: Build
     runs-on: ubuntu-latest
-    container: ohseemedia/laravel:80
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+            php-version: 8.1
+            extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, mysql, mysqli, pdo_mysql, bcmath, soap, intl, gd, exif, iconv, imagick
+            coverage: none
       - uses: actions/setup-node@v2
         with:
-          node-version: '15'
+          node-version: '18'
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
       - run: composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
       - run: ./vendor/bin/php-cs-fixer fix --config .php-cs-fixer.dist.php --dry-run
       - run: npm install
@@ -46,18 +59,34 @@ jobs:
     if: github.ref == 'refs/heads/main'
     name: Deploy application
     runs-on: ubuntu-latest
-    container: ohseemedia/laravel:80
     needs: [build]
     env:
       VAPOR_API_TOKEN: ${{ secrets.VAPOR_API_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+            php-version: 8.1
+            extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, mysql, mysqli, pdo_mysql, bcmath, soap, intl, gd, exif, iconv, imagick
+            coverage: none
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
       - run: composer install --no-dev --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
       - run: ./vendor/bin/vapor env:pull production
       - run: cp .env.production .env
       - run: php artisan generate:sitemap
-      - run: cat public/sitemap.xml
       - run: ./vendor/bin/vapor deploy production
+
       - name: Purge Cloudflare cache
         uses: jakejarvis/cloudflare-purge-action@master
         env:
