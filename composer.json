@@ -16,14 +16,14 @@
         "laravel/tinker": "^2.7",
         "laravel/vapor-cli": "^1.35",
         "laravel/vapor-core": "^2.19",
-        "league/commonmark": "^1.5",
+        "league/commonmark": "^2.2",
         "lorisleiva/laravel-actions": "^2.3",
         "ohseesoftware/laravel-vite-manifest": "^1.2",
         "spatie/laravel-feed": "^4.1",
         "spatie/laravel-sitemap": "^6.1",
         "spatie/once": "^3.0",
         "tightenco/ziggy": "dev-next",
-        "torchlight/torchlight-commonmark": "^0.4.1",
+        "torchlight/torchlight-commonmark": "^0.5.5",
         "league/flysystem-aws-s3-v3": "^3.0"
     },
     "require-dev": {
