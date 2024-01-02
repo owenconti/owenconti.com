@@ -24,7 +24,8 @@
         "spatie/laravel-sitemap": "^6.0",
         "spatie/once": "^3.0",
         "tightenco/ziggy": "^1.0",
-        "torchlight/torchlight-commonmark": "^0.4.1"
+        "torchlight/torchlight-commonmark": "^0.4.1",
+        "league/flysystem-aws-s3-v3": "^3.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
