@@ -32,7 +32,7 @@ class NewPasswordController extends Controller
      *
      * @return \Illuminate\Http\RedirectResponse
      *
-     * @throws \Illuminate\Validation\ValidationException
+     * @throws ValidationException
      */
     public function store(Request $request)
     {

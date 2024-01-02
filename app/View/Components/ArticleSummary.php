@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use App\Models\Page;
+use Closure;
 use Illuminate\View\Component;
 
 class ArticleSummary extends Component
@@ -22,7 +23,7 @@ class ArticleSummary extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return \Illuminate\Contracts\View\View|Closure|string
      */
     public function render()
     {
