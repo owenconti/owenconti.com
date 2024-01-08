@@ -3,19 +3,19 @@
 namespace App;
 
 use Illuminate\Support\Str;
-use League\CommonMark\ConfigurableEnvironmentInterface;
+use League\CommonMark\Environment\EnvironmentBuilderInterface;
 use League\CommonMark\Event\DocumentParsedEvent;
+use League\CommonMark\Extension\CommonMark\Node\Inline\Image;
 use League\CommonMark\Extension\ExtensionInterface;
-use League\CommonMark\Inline\Element\Image;
 
 class VaporAssetWrapping implements ExtensionInterface
 {
-    public function register(ConfigurableEnvironmentInterface $environment)
+    public function register(EnvironmentBuilderInterface $environment): void
     {
         $environment->addEventListener(DocumentParsedEvent::class, [$this, 'onDocumentParsed']);
     }
 
-    public function onDocumentParsed(DocumentParsedEvent $event)
+    public function onDocumentParsed(DocumentParsedEvent $event): void
     {
         $walker = $event->getDocument()->walker();
         while ($event = $walker->next()) {
@@ -29,7 +29,7 @@ class VaporAssetWrapping implements ExtensionInterface
                 continue;
             }
             // Pass it through to the `asset` helper.
-            $node->setUrl(asset('dist'.$node->getUrl()));
+            $node->setUrl(asset($node->getUrl()));
         }
     }
 }

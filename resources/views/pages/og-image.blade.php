@@ -1,33 +1,19 @@
 <html>
 
 <head>
-    @php
-        $accentColors = ['#B353FF', '#3B82F6', '#14B8A6', '#FC8800', '#FF1E1E', '#F50A73'];
-        $accentColor = collect($accentColors)->random();
-    @endphp
-
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
         href="https://rsms.me/inter/inter.css">
 
-    @vite(js/app.js)
-
-    <style type="text/css">
-        :root {
-            --osm-accent: #111827;
-        }
-
-    </style>
-
+    {{ Vite::useBuildDirectory('dist')->withEntryPoints(['resources/js/app.js']) }}
 </head>
 
 <body>
     <div
-        class="w-[1200px] h-[632px] relative flex items-center justify-center px-4 text-center text-white border-4 bg-brand-dark border-accent">
+        class="w-[1200px] h-[632px] relative flex items-center justify-center px-4 text-center text-white border-4 bg-zinc-900">
         <div>
-            <h1 class="px-6 py-3 text-5xl font-bold text-white bg-accent">{{ $title }}</h1>
+            <h1 class="px-6 py-4 text-5xl font-bold text-white bg-zinc-800 leading-normal rounded-3xl rounded-tl-none rounded-br-none">{{ $title }}</h1>
             @if ($excerpt ?? null)
-                <p class="inline-block p-4 mt-8 text-lg text-white border-l-2 border-accent bg-brand-dark-lighten">
-                    &ldquo;{{ $excerpt }}&rdquo;</p>
+                <p class="inline-block p-4 mt-8 text-lg text-white border-l-4 border-zinc-700 bg-zinc-800">{{ $excerpt }}</p>
             @endif
         </div>
 

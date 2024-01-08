@@ -24,12 +24,9 @@ When the above button is hovered, the following will happen:
 
 Check it out!
 
-<div class="p-4 pt-3 mb-4 bg-white border border-gray-300 rounded shadow-inner dark:border-gray-600 dark:bg-brand-dark-lighten">
-
-<div class="m-0 mb-4 font-normal tracking-widest text-gray-400 font-heading dark:text-gray-500">Example</div>
-
-<div><button class="inline-block p-2 text-red-500 transition-opacity duration-1000 ease-out rounded opacity-30 hover:opacity-100">Hover me to see the transition</button></div>
-
+<div class="p-4 pt-3 mb-4 bg-white border border-zinc-300 rounded shadow-inner dark:border-zinc-600 dark:bg-zinc-900">
+    <div class="m-0 mb-4 font-normal tracking-widest text-zinc-400 font-heading dark:text-zinc-400">Example</div>
+    <div><button class="inline-block p-2 text-red-500 transition-opacity duration-1000 ease-out rounded opacity-30 hover:opacity-100">Hover me to see the transition</button></div>
 </div>
 
 ## What classes are new in 1.2?

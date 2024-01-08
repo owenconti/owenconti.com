@@ -3,12 +3,14 @@
 @import 'tailwindcss/utilities';
 
 .input {
-  @apply py-2 px-3 bg-white border-2 border-gray-400 focus:border-accent focus:outline-none rounded;
+  @apply py-2 px-3 bg-white border-2 border-zinc-400 focus:border-zinc-500 focus:outline-none rounded;
 }
 
 /*! purgecss start ignore */
 .prose {
-  @apply text-base text-gray-700 max-w-full;
+  --tw-prose-pre-bg: theme('colors.zinc.800');
+
+  @apply text-base font-medium text-zinc-700 max-w-full leading-relaxed;
 
   .torchlight, pre, pre code {
     @apply font-code text-sm p-0;
@@ -23,12 +25,7 @@
 
     &::after {
       content: 'Code highlighting by torchlight.dev';
-      display: block;
-      clear: both;
-      font-size: 10px;
-      font-style: italic;
-      opacity: 0.3;
-      padding-top: 0.25rem;
+      @apply block text-[10px] pt-px clear-both text-zinc-600;
     }
 
     &.has-focus-lines {
@@ -49,12 +46,12 @@
     }
 
     .line-number {
-      @apply pr-2 pl-1;
+      @apply pr-2 pl-1 text-zinc-600 !important;
     }
   }
 
   code {
-    @apply text-accent px-2 py-0.5 font-normal;
+    @apply bg-zinc-100 px-2 py-0.5 font-semibold rounded font-code;
 
     &::before, &::after {
         @apply hidden;
@@ -62,10 +59,10 @@
   }
 
   a {
-    @apply text-brand-dark font-bold underline hover:text-brand-dark-darken;
+    @apply text-zinc-800 font-bold underline hover:text-zinc-700;
 
     &.heading-permalink {
-      @apply hidden text-gray-200 absolute no-underline hover:underline hover:text-gray-300 transform -translate-x-full pr-2;
+      @apply hidden text-zinc-300 absolute no-underline hover:underline hover:text-zinc-400 transform -translate-x-full pr-2;
     }
   }
 
@@ -82,7 +79,7 @@
   }
 
   blockquote {
-    @apply p-4 my-6 mx-0 text-gray-800 bg-gray-100 border-l-8 border-accent;
+    @apply p-4 my-6 mx-0 text-zinc-800 bg-zinc-100 border-l-8 border-zinc-300 space-y-2;
 
     p {
       @apply m-0 p-0;
@@ -94,18 +91,18 @@
   }
 
   .table-of-contents {
-    @apply mb-8 pb-4 border-b border-gray-300;
+    @apply mb-8 p-0 pb-4 border-b border-zinc-300;
 
     &::before {
       content: 'Quick links';
-      @apply font-bold text-gray-900;
+      @apply font-bold text-zinc-900;
     }
 
     li {
-      @apply pl-5;
+      @apply ml-8;
 
       p, ul {
-        @apply m-0;
+        @apply m-0 p-0;
       }
     }
 
@@ -121,7 +118,7 @@
 @media (min-width: 768px) {
   .prose {
     blockquote {
-      @apply ml-10;
+      @apply ml-4;
     }
 
     a.heading-permalink {
@@ -132,22 +129,24 @@
 
 html.dark {
   .prose {
-    @apply text-brand-light;
+    --tw-prose-pre-bg: theme('colors.zinc.800');
+
+    @apply text-white;
 
     h1, h2, h3, h4, h5, h6 {
-      @apply text-brand-light;
+      @apply text-white;
     }
 
     a {
-      @apply text-brand-light hover:text-brand-light-darken;
+      @apply text-zinc-100 hover:text-zinc-300;
 
       &.heading-permalink {
-        @apply text-gray-600 hover:text-gray-700;
+        @apply text-zinc-600 hover:text-zinc-700;
       }
     }
 
     code {
-      @apply bg-brand-dark-lighten text-brand-light rounded;
+      @apply bg-zinc-800 text-zinc-200 rounded;
     }
 
     strong {
@@ -155,14 +154,14 @@ html.dark {
     }
 
     blockquote {
-      @apply bg-brand-dark-lighten text-brand-light;
+      @apply bg-zinc-800 text-zinc-100 border-zinc-700;
     }
 
     .table-of-contents {
-      @apply border-gray-700;
+      @apply border-zinc-700;
 
       &::before {
-        @apply text-gray-100;
+        @apply text-zinc-100;
       }
     }
   }
