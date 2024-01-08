@@ -3,7 +3,6 @@
 return [
     'main' => [
         ['label' => 'Articles', 'url' => '/articles'],
-        ['label' => 'Analytics', 'url' => '/analytics'],
     ],
     'links' => [
         ['component' => 'youtube-icon', 'label' => 'YouTube', 'url' => 'https://ohsee.link/youtube'],

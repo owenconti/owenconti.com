@@ -4,14 +4,14 @@
             href="{{ $item['url'] }}"
             @class([
                 'hover:underline',
-                'text-gray-900 dark:text-white font-bold' => $item['active'],
+                'text-gray-900 dark:text-white font-bold' => !!$item['active'],
                 'font-normal text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white' => !$item['active']
             ])
         >{{ $item['label'] }}</a>
     @endforeach
 </nav>
 
-<div v-cloak class="inset-x-0 top-0 z-10 mt-6 transition origin-top-right transform md:hidden" :class="{ 'absolute' : isOpen , 'hidden' : !isOpen}" >
+<div v-cloak class="inset-x-0 top-0 z-10 mt-6 transition origin-top-right md:hidden" :class="{ 'absolute' : isOpen , 'hidden' : !isOpen}" >
     <div class="relative bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-brand-dark divide-gray-50">
         <div class="px-5 pt-5 pb-6">
             <div class="absolute top-0 right-0 mt-3 mr-3">
