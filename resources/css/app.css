@@ -8,7 +8,7 @@
 
 /*! purgecss start ignore */
 .prose {
-  @apply text-base text-gray-700 max-w-full;
+  @apply text-base font-medium text-gray-700 max-w-full leading-relaxed;
 
   .torchlight, pre, pre code {
     @apply font-code text-sm p-0;
@@ -26,7 +26,6 @@
       display: block;
       clear: both;
       font-size: 10px;
-      font-style: italic;
       opacity: 0.3;
       padding-top: 0.25rem;
     }
@@ -54,7 +53,7 @@
   }
 
   code {
-    @apply text-accent px-2 py-0.5 font-normal;
+    @apply bg-brand-light text-accent px-2 py-0.5 font-normal rounded font-code;
 
     &::before, &::after {
         @apply hidden;

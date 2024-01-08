@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3712793ffdcf3a2fbc6e2c1e163c319",
+    "content-hash": "4c1ec3f174c9225accc5d5619d618fd8",
     "packages": [
         {
             "name": "archtechx/laravel-pages",

@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\VaporAssetWrapping;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
-use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment\Environment;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
 use League\CommonMark\Extension\TableOfContents\TableOfContentsExtension;
+use League\CommonMark\MarkdownConverter;
 use Torchlight\Commonmark\V2\TorchlightExtension;
 
 class PageController
@@ -63,7 +63,7 @@ class PageController
             ->addExtension(new HeadingPermalinkExtension())
             ->addExtension(new TableOfContentsExtension());
 
-        $commonMarkConverter = new CommonMarkConverter(environment: $environment);
+        $commonMarkConverter = new MarkdownConverter($environment);
 
         return $commonMarkConverter->convert($content);
     }
