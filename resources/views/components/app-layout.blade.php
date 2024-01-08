@@ -13,17 +13,16 @@
     <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
         href="https://rsms.me/inter/inter.css">
 
-    <link rel="icon" href="{{ asset('/dist/favicon.svg') }}" sizes="any" type="image/svg+xml" />
-    <link rel="icon" href="{{ asset('/dist/favicon.png') }}" type="image/png" />
+    <link rel="icon" href="{{ asset('/favicon.svg') }}" sizes="any" type="image/svg+xml" />
+    <link rel="icon" href="{{ asset('/favicon.png') }}" type="image/png" />
 
     <!-- Scripts -->
-    @vite(js/app.js)
+    {{ Vite::useBuildDirectory('dist')->withEntryPoints(['resources/js/app.js']) }}
 
     <style type="text/css">
         :root {
             --osm-accent: #111827;
         }
-
     </style>
 </head>
 

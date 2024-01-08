@@ -1,36 +1,26 @@
-const { resolve } = require('path');
-const Dotenv = require('dotenv');
+import { defineConfig } from 'vite';
+import Dotenv from 'dotenv';
+import mkcert from 'vite-plugin-mkcert';
+import laravel from 'laravel-vite-plugin';
 
 Dotenv.config();
 
-const ASSET_URL = process.env.ASSET_URL || '';
+const isLocalHttps = process.env.VITE_HTTPS === 'true';
 
-export default {
-  root: 'resources',
-  base: `${ASSET_URL}/dist/`,
+const plugins = [
+  laravel({
+    buildDirectory: 'dist',
+    input: ['resources/js/app.js']
+  })
+];
 
-  build: {
-    outDir: resolve(__dirname, 'public/dist'),
-    emptyOutDir: true,
-    manifest: true,
-    target: 'es2018',
-    rollupOptions: {
-      input: '/js/app.js'
-    }
-  },
+if (isLocalHttps) {
+  plugins.push(mkcert());
+}
 
+export default defineConfig({
+  plugins,
   server: {
-    strictPort: true,
-    port: 3000
-  },
-
-  resolve: {
-    alias: {
-      '@': '/js'
-    }
-  },
-
-  optimizeDeps: {
-    include: []
+    host: '127.0.01'
   }
-};
+});
