@@ -1,8 +1,8 @@
-<div {{ $attributes->merge(['class' => 'mt-1 text-sm text-gray-500 flex items-center dark:text-gray-300']) }}>
+<div {{ $attributes->merge(['class' => 'mt-1 text-sm text-zinc-500 flex items-center dark:text-zinc-400']) }}>
     <p>
         <time datetime="2021-08-03">{{ $article->updated_at->format('M d, Y') }}</time>
         @if($article->category)
-            under <a href="{{ $article->category->url }}" class="font-bold text-gray-800 dark:text-white hover:underline">{{ $article->category->title }}</a>
+            under <a href="{{ $article->category->url }}" class="font-bold text-zinc-800 dark:text-white hover:underline">{{ $article->category->title }}</a>
         @endif
     </p>
 

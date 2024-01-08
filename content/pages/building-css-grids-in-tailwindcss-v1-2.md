@@ -10,8 +10,8 @@ created_at: 1589853602
 
 Support for CSS grids has been added to Tailwind v1.2\. Here's a little example:
 
-<div class="p-4 pt-3 mb-4 bg-white border border-gray-300 rounded shadow-inner dark:border-gray-600 dark:bg-brand-dark-lighten">
-  <div class="m-0 mb-4 font-normal tracking-widest text-gray-400 font-heading dark:text-gray-500">
+<div class="p-4 pt-3 mb-4 bg-white border border-zinc-300 rounded shadow-inner dark:border-zinc-600 dark:bg-zinc-200">
+  <div class="m-0 mb-4 font-normal tracking-widest text-zinc-400 font-heading dark:text-zinc-500">
     Example
   </div>
 

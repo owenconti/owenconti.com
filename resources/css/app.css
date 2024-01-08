@@ -2,7 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
 .input {
   @apply py-2 px-3 bg-white border-2 border-zinc-400 focus:border-zinc-500 focus:outline-none rounded;
 }
@@ -10,6 +9,7 @@
 /*! purgecss start ignore */
 .prose {
   --tw-prose-pre-bg: theme('colors.zinc.800');
+
   @apply text-base font-medium text-zinc-700 max-w-full leading-relaxed;
 
   .torchlight, pre, pre code {
@@ -59,7 +59,7 @@
   }
 
   a {
-    @apply text-brand-dark font-bold underline hover:text-brand-dark-darken;
+    @apply text-zinc-800 font-bold underline hover:text-zinc-700;
 
     &.heading-permalink {
       @apply hidden text-zinc-300 absolute no-underline hover:underline hover:text-zinc-400 transform -translate-x-full pr-2;
@@ -91,18 +91,18 @@
   }
 
   .table-of-contents {
-    @apply mb-8 p-0 pb-4 border-b border-gray-300;
+    @apply mb-8 p-0 pb-4 border-b border-zinc-300;
 
     &::before {
       content: 'Quick links';
-      @apply font-bold text-gray-900;
+      @apply font-bold text-zinc-900;
     }
 
     li {
       @apply ml-8;
 
       p, ul {
-        @apply m-0;
+        @apply m-0 p-0;
       }
     }
 
@@ -129,14 +129,16 @@
 
 html.dark {
   .prose {
-    @apply text-brand-light;
+    --tw-prose-pre-bg: theme('colors.zinc.800');
+
+    @apply text-white;
 
     h1, h2, h3, h4, h5, h6 {
-      @apply text-brand-light;
+      @apply text-white;
     }
 
     a {
-      @apply text-brand-light hover:text-brand-light-darken;
+      @apply text-zinc-100 hover:text-zinc-300;
 
       &.heading-permalink {
         @apply text-zinc-600 hover:text-zinc-700;
@@ -144,7 +146,7 @@ html.dark {
     }
 
     code {
-      @apply bg-brand-dark-lighten text-brand-light rounded;
+      @apply bg-zinc-800 text-zinc-200 rounded;
     }
 
     strong {
@@ -152,14 +154,14 @@ html.dark {
     }
 
     blockquote {
-      @apply bg-brand-dark-lighten text-brand-light;
+      @apply bg-zinc-800 text-zinc-100 border-zinc-700;
     }
 
     .table-of-contents {
-      @apply border-gray-700;
+      @apply border-zinc-700;
 
       &::before {
-        @apply text-gray-100;
+        @apply text-zinc-100;
       }
     }
   }

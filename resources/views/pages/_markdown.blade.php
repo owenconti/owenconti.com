@@ -4,7 +4,7 @@
         <x-article-metadata :article="$page" class="mt-2" />
     </div>
 
-    <div class="mt-8 prose prose-accent">
+    <div class="mt-8 prose prose-zinc-800 dark:prose-zinc-100">
         {!! $content !!}
         
         @if($page->video)

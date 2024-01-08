@@ -58,12 +58,6 @@
 
         <!-- Scripts -->
         {{ Vite::useBuildDirectory('dist')->withEntryPoints(['resources/js/app.js']) }}
-
-        <style type="text/css">
-            :root {
-                --osm-accent: #111827;
-            }
-        </style>
     </head>
 
     <body class="font-sans text-base antialiased bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 transition-colors duration-300">

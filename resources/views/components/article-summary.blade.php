@@ -2,12 +2,12 @@
     <h2>
         <a
             href="{{ $article->url }}"
-            class="text-xl font-bold hover:underline text-brand-dark hover:text-brand-dark-darken dark:text-brand-light dark:hover:text-brand-light-lighten"
+            class="text-xl font-bold hover:underline text-zinc-800 hover:text-zinc-700 dark:text-zinc-100 dark:hover:text-zinc-200"
         >
             {{ $article->title}}
         </a>
     </h2>
-    
+
     <x-article-metadata :article="$article" />
 
     @if($article->excerpt)
