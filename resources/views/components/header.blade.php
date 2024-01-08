@@ -1,8 +1,8 @@
-<header v-scope="Header()" class="w-full border-t-4 border-accent">
+<header v-scope="Header()" class="w-full border-t-4 border-zinc-900">
     <div class="w-full max-w-6xl px-6 mx-auto">
         <div class="flex items-center justify-between py-6 md:justify-between md:space-x-10">
             <a href="/" class="flex items-center justify-between">
-                <x-logo class="h-14" />
+                <x-logo class="h-10" />
             </a>
 
             <div class="flex items-center">
@@ -15,9 +15,8 @@
                     </button>
                 </div>
 
-                <div class="flex items-center h-10 md:h-auto md:p-0">
+                <div class="flex items-center gap-2 h-10 md:h-auto md:p-0">
                     <x-main-navigation class="hidden space-x-6 md:inline-flex" />
-
                     <x-dark-mode-toggle />
                 </div>
             </div>

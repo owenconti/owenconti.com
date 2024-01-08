@@ -1,5 +1,5 @@
 @if($relatedArticles->count())
-<div class="mt-8">
+<div class="pt-6">
   <h3 class="text-xl font-bold">Related Articles</h3>
   <div class="space-y-4 mt-2">
     @foreach($relatedArticles as $article)

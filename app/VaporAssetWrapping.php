@@ -29,7 +29,7 @@ class VaporAssetWrapping implements ExtensionInterface
                 continue;
             }
             // Pass it through to the `asset` helper.
-            $node->setUrl(asset('dist'.$node->getUrl()));
+            $node->setUrl(asset($node->getUrl()));
         }
     }
 }
