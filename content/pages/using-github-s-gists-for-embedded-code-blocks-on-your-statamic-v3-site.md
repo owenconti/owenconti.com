@@ -9,7 +9,7 @@ updated_at: 1590280056
 created_at: 1590280056
 ---
 
-<div class="prose prose-accent">
+<div class="prose prose-zinc-800 dark:prose-zinc-100">
 
 Check how easy it is to have proper syntax highlighting added to your code blocks:
 

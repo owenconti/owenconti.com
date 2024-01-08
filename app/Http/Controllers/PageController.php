@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\VaporAssetWrapping;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
-use League\CommonMark\CommonMarkConverter;
-use League\CommonMark\Environment;
+use League\CommonMark\Environment\Environment;
+use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
 use League\CommonMark\Extension\TableOfContents\TableOfContentsExtension;
-use Torchlight\Commonmark\TorchlightExtension;
+use League\CommonMark\MarkdownConverter;
+use Torchlight\Commonmark\V2\TorchlightExtension;
 
 class PageController
 {
@@ -51,20 +52,19 @@ class PageController
 
     private function generateContent(string $content): string
     {
-        $environment = Environment::createCommonMarkEnvironment()
+        $environment = new Environment([
+            'heading_permalink' => [
+                'symbol' => '#',
+            ],
+        ]);
+        $environment->addExtension(new CommonMarkCoreExtension())
             ->addExtension(new TorchlightExtension())
             ->addExtension(new VaporAssetWrapping())
             ->addExtension(new HeadingPermalinkExtension())
             ->addExtension(new TableOfContentsExtension());
 
-        $environment->mergeConfig([
-            'heading_permalink' => [
-                'symbol' => '#',
-            ],
-        ]);
+        $commonMarkConverter = new MarkdownConverter($environment);
 
-        $commonMarkConverter = new CommonMarkConverter(environment: $environment);
-
-        return $commonMarkConverter->convertToHtml($content);
+        return $commonMarkConverter->convert($content);
     }
 }

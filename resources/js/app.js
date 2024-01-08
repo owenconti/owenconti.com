@@ -1,5 +1,4 @@
 import '../css/app.css';
-import './dark-mode.js';
 
 import { createApp } from 'petite-vue';
 
