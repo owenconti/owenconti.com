@@ -16,7 +16,4 @@
     <p class="mt-8 text-base text-center text-zinc-700 dark:text-zinc-500">
         &copy; Owen Conti. All rights reserved.
     </p>
-
-    @env('production')
-    @endenv
 </footer>

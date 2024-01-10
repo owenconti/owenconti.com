@@ -74,5 +74,15 @@
         </div>
 
         <x-footer />
+
+        @env('production')
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKK5TT3852"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FKK5TT3852');
+            </script>
+        @endenv
     </body>
 </html>
