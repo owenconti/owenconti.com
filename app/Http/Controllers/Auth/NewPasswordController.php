@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Inertia\Response;
+use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
@@ -19,7 +21,7 @@ class NewPasswordController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function create(Request $request)
+    public function create(Request $request): Response
     {
         return Inertia::render('Auth/ResetPassword', [
             'email' => $request->email,
@@ -34,7 +36,7 @@ class NewPasswordController extends Controller
      *
      * @throws ValidationException
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $request->validate([
             'token' => 'required',

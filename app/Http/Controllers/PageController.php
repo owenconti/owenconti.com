@@ -14,7 +14,7 @@ use Torchlight\Commonmark\V2\TorchlightExtension;
 
 class PageController
 {
-    public function __invoke(string $page)
+    public function __invoke(string $page): \Illuminate\View\View
     {
         if (str_starts_with($page, '_')) {
             abort(404);

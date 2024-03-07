@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\View\View;
 use App\Models\Category;
 
 class ListCategoriesController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): View
     {
         seo()->title('Articles');
 
