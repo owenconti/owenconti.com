@@ -26,35 +26,20 @@
 
               isDarkMode = hasPreference ? preferenceDarkMode : osDarkMode;
 
-              const $html = document.getElementsByTagName('html')[0];
-
-              if (isDarkMode) {
-                $html.classList.add('dark');
-              } else {
-                $html.classList.remove('dark');
-              }
+              document.getElementsByTagName('html')[0].classList.toggle('dark', isDarkMode)
             }
 
             window.onDarkModeToggle = function () {
-              if (isDarkMode) {
-                localStorage.darkModeEnabled = 'false';
-              } else {
-                localStorage.darkModeEnabled = 'true';
-              }
-
+              localStorage.darkModeEnabled = isDarkMode ? 'false' : 'true';
               determineDarkMode();
             };
-
-            window.addEventListener('DOMContentLoaded', () => {
-                document.getElementsByTagName('body')[0].classList.remove('hidden');
-            });
         </script>
 
         <!-- Scripts -->
         {{ Vite::useBuildDirectory('dist')->withEntryPoints(['resources/js/app.js']) }}
     </head>
 
-    <body class="font-sans text-base antialiased bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 transition-colors duration-300 hidden">
+    <body class="font-sans text-base antialiased bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 transition-colors duration-300">
         <x-header />
 
         <div class="flex w-full max-w-6xl px-6 mx-auto mt-6">
