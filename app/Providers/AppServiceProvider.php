@@ -11,7 +11,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
     }
 
@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $siteTitle = 'Owen Conti';
         $description = 'Owen Conti\'s personal blog including articles on Laravel, PHP, React, Vue, and MySQL.';

@@ -28,7 +28,7 @@ class ArticleMakeCommand extends GeneratorCommand
         return base_path('stubs/article.stub');
     }
 
-    public function handle()
+    public function handle(): void
     {
         $slug = trim($this->argument('slug'));
         $path = base_path("content/pages/{$slug}.md");
