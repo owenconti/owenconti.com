@@ -23,7 +23,7 @@ class ArticleMakeCommand extends GeneratorCommand
 
     protected $type = 'Article';
 
-    protected function getStub()
+    protected function getStub(): string
     {
         return base_path('stubs/article.stub');
     }
@@ -36,7 +36,7 @@ class ArticleMakeCommand extends GeneratorCommand
         if ($this->files->exists($path)) {
             $this->error("{$slug} already exists!");
 
-            return false;
+            return;
         }
 
         $stub = $this->files->get($this->getStub());
