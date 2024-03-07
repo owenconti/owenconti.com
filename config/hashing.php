@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Default Hash Driver
@@ -28,7 +29,8 @@ return [
     */
 
     'bcrypt' => [
-        'rounds' => env('BCRYPT_ROUNDS', 10),
+        'rounds' => env('BCRYPT_ROUNDS', 12),
+        'verify' => true,
     ],
 
     /*
@@ -46,5 +48,7 @@ return [
         'memory' => 1024,
         'threads' => 2,
         'time' => 2,
+        'verify' => true,
     ],
+
 ];
