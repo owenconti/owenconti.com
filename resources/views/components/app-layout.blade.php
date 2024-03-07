@@ -17,9 +17,7 @@
         <script type="text/javascript">
             let isDarkMode = false;
 
-            document.addEventListener('DOMContentLoaded', () => {
-              determineDarkMode();
-            });
+            determineDarkMode();
 
             function determineDarkMode() {
               const hasPreference = !!localStorage.darkModeEnabled;
@@ -29,23 +27,15 @@
               isDarkMode = hasPreference ? preferenceDarkMode : osDarkMode;
 
               const $html = document.getElementsByTagName('html')[0];
-              const $darkModeIcon = document.getElementById('dark-mode-icon');
-              const $lightModeIcon = document.getElementById('light-mode-icon');
 
               if (isDarkMode) {
                 $html.classList.add('dark');
-                $darkModeIcon.classList.remove('hidden');
-                $lightModeIcon.classList.add('hidden');
               } else {
                 $html.classList.remove('dark');
-                $darkModeIcon.classList.add('hidden');
-                $lightModeIcon.classList.remove('hidden');
               }
             }
 
             window.onDarkModeToggle = function () {
-              const $html = document.getElementsByTagName('html')[0];
-
               if (isDarkMode) {
                 localStorage.darkModeEnabled = 'false';
               } else {
@@ -54,13 +44,17 @@
 
               determineDarkMode();
             };
+
+            window.addEventListener('DOMContentLoaded', () => {
+                document.getElementsByTagName('body')[0].classList.remove('hidden');
+            });
         </script>
 
         <!-- Scripts -->
         {{ Vite::useBuildDirectory('dist')->withEntryPoints(['resources/js/app.js']) }}
     </head>
 
-    <body class="font-sans text-base antialiased bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 transition-colors duration-300">
+    <body class="font-sans text-base antialiased bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 transition-colors duration-300 hidden">
         <x-header />
 
         <div class="flex w-full max-w-6xl px-6 mx-auto mt-6">
