@@ -208,5 +208,4 @@ return [
     */
 
     'partitioned' => false,
-
 ];

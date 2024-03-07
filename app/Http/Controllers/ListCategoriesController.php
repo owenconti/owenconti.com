@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use App\Models\Category;
+use Illuminate\View\View;
 
 class ListCategoriesController extends Controller
 {

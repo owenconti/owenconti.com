@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Inertia\Response;
-use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
@@ -13,6 +12,7 @@ use Illuminate\Support\Str;
 use Illuminate\Validation\Rules;
 use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class NewPasswordController extends Controller
 {
@@ -29,7 +29,6 @@ class NewPasswordController extends Controller
 
     /**
      * Handle an incoming new password request.
-     *
      *
      * @throws ValidationException
      */
