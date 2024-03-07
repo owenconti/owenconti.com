@@ -1,13 +1,4 @@
 import '../css/app.css';
+import Alpine from 'alpinejs';
 
-import { createApp } from 'petite-vue';
-
-function Header(props) {
-  return {
-    isOpen: false
-  };
-}
-
-createApp({
-  Header
-}).mount();
+Alpine.start();

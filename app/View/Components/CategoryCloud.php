@@ -17,7 +17,7 @@ class CategoryCloud extends Component
      */
     public function __construct()
     {
-        $this->categories = Category::withCount('pages')->orderBy('pages_count', 'desc')->get();
+        $this->categories = Category::orderBy('title')->get();
     }
 
     /**

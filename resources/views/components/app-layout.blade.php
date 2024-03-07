@@ -39,7 +39,7 @@
         {{ Vite::useBuildDirectory('dist')->withEntryPoints(['resources/js/app.js']) }}
     </head>
 
-    <body class="font-sans text-base antialiased bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-50 transition-colors duration-300">
+    <body class="font-sans text-base antialiased bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-300">
         <x-header />
 
         <div class="flex w-full max-w-6xl px-6 mx-auto mt-6">
