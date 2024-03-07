@@ -4,6 +4,7 @@ namespace App\Models;
 
 use ArchTech\Pages\Page as BasePage;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Schema\Blueprint;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
@@ -65,7 +66,7 @@ class Page extends BasePage implements Feedable
         return $this->type === 'post';
     }
 
-    public function category()
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class, 'category_slug');
     }

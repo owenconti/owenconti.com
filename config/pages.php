@@ -3,7 +3,7 @@
 use App\Http\Controllers\PageController;
 
 return [
-    'model' => \App\Models\Page::class,
+    'model' => App\Models\Page::class,
 
     'views' => [
         /*

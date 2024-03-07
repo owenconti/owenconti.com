@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Schema\Blueprint;
 use Orbit\Concerns\Orbital;
 
@@ -33,7 +34,7 @@ class Category extends Model
         return false;
     }
 
-    public function pages()
+    public function pages(): HasMany
     {
         return $this->hasMany(Page::class, 'category_slug', 'slug')->orderBy('created_at', 'desc');
     }
