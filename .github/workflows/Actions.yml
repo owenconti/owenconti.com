@@ -71,10 +71,10 @@ jobs:
           restore-keys: ${{ runner.os }}-composer-
 
       - run: composer install --no-dev --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
-      - run: ./vendor/bin/vapor env:pull $ENVIRONMENT
-      - run: cp .env.$ENVIRONMENT .env
+      - run: ./vendor/bin/vapor env:pull ${{ env.ENVIRONMENT }}
+      - run: cp .env.${{ env.ENVIRONMENT }} .env
       - run: php artisan generate:sitemap
-      - run: ./vendor/bin/vapor deploy $ENVIRONMENT
+      - run: ./vendor/bin/vapor deploy ${{ env.ENVIRONMENT }}
 
       - name: Purge Cloudflare cache
         uses: jakejarvis/cloudflare-purge-action@master
