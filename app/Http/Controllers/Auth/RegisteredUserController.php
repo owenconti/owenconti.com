@@ -18,8 +18,6 @@ class RegisteredUserController extends Controller
 {
     /**
      * Display the registration view.
-     *
-     * @return \Illuminate\View\View
      */
     public function create(): Response
     {
@@ -29,7 +27,6 @@ class RegisteredUserController extends Controller
     /**
      * Handle an incoming registration request.
      *
-     * @return \Illuminate\Http\RedirectResponse
      *
      * @throws \Illuminate\Validation\ValidationException
      */
