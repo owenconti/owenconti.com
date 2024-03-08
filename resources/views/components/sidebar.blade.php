@@ -1,5 +1,4 @@
-<div class="divide-y-4 dark:divide-zinc-800 divide-zinc-200 space-y-6">
-    <x-search />
+<div class="divide-y dark:divide-zinc-800 divide-zinc-200 flex flex-col gap-6">
     <x-category-cloud />
-    <x-sidebar-links />
+    <x-sidebar-links class="pt-6" />
 </div>

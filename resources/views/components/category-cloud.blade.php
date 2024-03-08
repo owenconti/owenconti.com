@@ -1,7 +1,7 @@
 @php
 $page = $page ?? null;
 @endphp
-<div class="pt-6 space-y-2">
+<div class="space-y-2">
     @foreach($categories as $category)
         <div x-data="{ isOpen: {{ $page?->category_slug === $category->slug ? 'true' : 'false' }} }">
             <button @click="isOpen = !isOpen" class="w-full flex justify-between items-center text-left py-1 text-sm font-bold dark:text-gray-100 text-gray-800 rounded-lg rounded-tl-none rounded-br-none dark:hover:text-white hover:text-gray-900">
