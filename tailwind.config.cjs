@@ -16,8 +16,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        heading: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['DM Sans', ...defaultTheme.fontFamily.sans],
+        heading: ['DM Sans', ...defaultTheme.fontFamily.sans],
         code: ['Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
       },
       blur: {

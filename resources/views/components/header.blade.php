@@ -2,7 +2,7 @@
     <div class="w-full max-w-6xl px-6 mx-auto">
         <div class="flex items-center justify-between py-6 md:justify-between md:space-x-10 gap-8">
             <a href="/" class="flex items-center justify-between">
-                <x-logo class="h-10" />
+                <x-logo class="h-9" />
             </a>
 
             <x-search class="flex-1 max-w-sm hidden md:flex" />

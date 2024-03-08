@@ -1,5 +1,5 @@
 <form method="GET" action="/search" {{ $attributes->merge(['class' => 'flex items-center']) }}>
-    <input type="text" name="query" class="w-full bg-transparent p-2 rounded ring-2 text-sm ring-zinc-100 dark:ring-zinc-800/50 focus:ring-4 focus:ring-zinc-200 dark:focus:ring-zinc-700/50 outline-none dark:placeholder:text-zinc-700" placeholder="Search...">
+    <input type="text" name="query" class="w-full bg-transparent p-2 rounded ring-2 text-sm ring-zinc-200 dark:ring-zinc-800/50 focus:ring-4 focus:ring-zinc-300 dark:focus:ring-zinc-700/50 outline-none dark:placeholder:text-zinc-700" placeholder="Search...">
     <button type="submit" class="w-5 h-5 -ml-8 text-zinc-300 hover:text-zinc-400 dark:text-zinc-600 dark:hover:text-zinc-500">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

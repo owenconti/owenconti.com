@@ -1,4 +1,4 @@
-<div class="flex gap-4">
+<div class="flex items-center gap-4">
     <img src="{{ asset('owen-conti-drawing.jpg') }}" style="height: 40px;" alt="Owen Conti" class="size-10 rounded-full" />
 
     <svg {{ $attributes->merge(['class' => 'inline-block text-zinc-800 dark:text-zinc-100']) }} viewBox="0 0 375 102" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
