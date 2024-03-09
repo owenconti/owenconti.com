@@ -17,8 +17,8 @@ class HomeController extends Controller
                 ['label' => 'GitHub', 'description' => 'I keep all of my development work and open source code on GitHub.', 'icon' => 'github-icon', 'url' => 'https://github.com/owenconti'],
                 ['label' => 'Chat with me on X', 'description' => 'My short form and conversational content is posted on X.', 'icon' => 'twitter-icon', 'url' => 'https://x.com/owenconti'],
                 ['label' => 'Twitch', 'description' => 'I sometimes stream my side project and open source work on Twitch.', 'icon' => 'twitch-icon', 'url' => 'https://twitch.tv/owenconti'],
-                ['label' => 'LinkedIn', 'description' => 'Connect with me on LinkedIn! Happy to chat anything business related over there.', 'icon' => 'linkedin-icon', 'url' => 'https://www.linkedin.com/in/owen-conti-2bb75b184']
-            ]
+                ['label' => 'LinkedIn', 'description' => 'Connect with me on LinkedIn! Happy to chat anything business related over there.', 'icon' => 'linkedin-icon', 'url' => 'https://www.linkedin.com/in/owen-conti-2bb75b184'],
+            ],
         ]);
     }
 }
