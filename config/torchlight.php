@@ -14,7 +14,7 @@ return [
     'token' => env('TORCHLIGHT_TOKEN'),
 
     // If you want to register the blade directives, set this to true.
-    'blade_components' => false,
+    'blade_components' => true,
 
     // The Host of the API.
     'host' => env('TORCHLIGHT_HOST', 'https://api.torchlight.dev'),

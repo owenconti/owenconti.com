@@ -17,7 +17,7 @@
   }
 
   .torchlight {
-    @apply p-1 block min-h-full;
+    @apply px-1 pt-2 block min-h-full;
     background: none !important;
     min-width: -webkit-max-content;
     min-width: -moz-max-content;
@@ -25,7 +25,7 @@
 
     &::after {
       content: 'Code highlighting by torchlight.dev';
-      @apply block text-[10px] pt-px clear-both text-zinc-600;
+      @apply block text-[10px] pt-px pl-2 clear-both text-zinc-600;
     }
 
     &.has-focus-lines {

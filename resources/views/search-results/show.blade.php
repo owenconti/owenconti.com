@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-two-column-layout>
     <h1 class="text-3xl font-bold font-heading">{{ $title }}</h1>
 
     <div class="mt-8">
@@ -12,4 +12,4 @@
         </div>
       @endif
     </div>
-</x-app-layout>
+</x-two-column-layout>

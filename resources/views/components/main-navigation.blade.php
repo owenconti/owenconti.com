@@ -1,11 +1,12 @@
-<nav class="hidden space-x-6 md:inline-flex">
+<nav class="hidden space-x-2 md:inline-flex">
     @foreach($items as $item)
         <x-button
             as="a"
             href="{{ $item['url'] }}"
             @class([
-                'text-zinc-900 dark:text-white font-bold' => !!$item['active'],
-                'font-normal text-zinc-800 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white' => !$item['active']
+                'font-semibold',
+                '!text-zinc-900 dark:!text-white' => !!$item['active'],
+                '!text-zinc-700 hover:!text-zinc-900 dark:!text-zinc-400 dark:hover:!text-white' => !$item['active']
             ])
         >{{ $item['label'] }}</x-button>
     @endforeach

@@ -22,7 +22,8 @@
         "spatie/laravel-sitemap": "^6.2",
         "spatie/once": "^3.0",
         "tightenco/ziggy": "^2.0",
-        "torchlight/torchlight-commonmark": "^0.5.5"
+        "torchlight/torchlight-commonmark": "^0.5.5",
+        "torchlight/torchlight-laravel": "^0.5.14"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

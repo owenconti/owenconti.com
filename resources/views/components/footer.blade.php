@@ -2,7 +2,7 @@
     <p class="text-sm text-center text-zinc-700 dark:text-zinc-500">
         &copy; Owen Conti. All rights reserved.
     </p>
-    
+
     <div class="flex justify-center gap-6">
         @foreach($nav['links'] as $link)
             <a href="{{ $link['url'] }}" class="text-zinc-800 hover:text-zinc-700 dark:text-zinc-200 dark:hover:text-zinc-100">

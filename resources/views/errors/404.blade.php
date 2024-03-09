@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-two-column-layout>
     <div>
         <h1 class="text-4xl font-bold">Page not found!</h1>
 
@@ -8,4 +8,4 @@
           <x-search class="mt-2" />
         </div>
     </div>
-</x-app-layout>
+</x-two-column-layout>

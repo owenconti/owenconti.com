@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-two-column-layout>
     <div>
         <h1 class="text-4xl font-bold">{{ $page->title }}</h1>
         <x-article-metadata :article="$page" class="mt-2" />
@@ -36,4 +36,4 @@
 
         <p>Found an issue with the article? <a href="https://github.com/owenconti/owenconti.com/blob/main/content/pages/{{ substr($page->slug, strrpos($page->slug, '/') + 1) }}.md">Submit your edits</a> against the repository.</p>
     </div>
-</x-app-layout>
+</x-two-column-layout>

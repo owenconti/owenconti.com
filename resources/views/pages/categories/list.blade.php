@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-two-column-layout>
     <div class="space-y-12">
         @foreach($categories as $category)
             <div>
@@ -14,4 +14,4 @@
             </div>
         @endforeach
     </div>
-</x-app-layout>
+</x-two-column-layout>

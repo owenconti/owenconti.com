@@ -5,7 +5,7 @@
                 <x-logo class="h-9" />
             </a>
 
-            <x-search class="flex-1 max-w-sm hidden md:flex" />
+            <x-search class="flex-1 max-w-xs hidden md:flex" />
 
             <div class="flex items-center gap-2">
                 <div class="-my-2 -mr-2 hidden">
@@ -18,6 +18,7 @@
                 </div>
 
                 <div class="flex items-center gap-2 h-10 md:h-auto md:p-0">
+                    <x-main-navigation />
                     <x-dark-mode-toggle />
                 </div>
             </div>

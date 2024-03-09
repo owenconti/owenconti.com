@@ -44,14 +44,8 @@
     <body class="font-sans text-base antialiased bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 transition-colors duration-300">
         <x-header />
 
-        <div class="flex w-full max-w-6xl px-6 mx-auto mt-6">
-            <div class="hidden w-64 lg:w-full lg:max-w-xs lg:block">
-                <x-sidebar />
-            </div>
-
-            <div class="flex-1 w-0 max-w-full lg:pl-20">
-                {{ $slot }}
-            </div>
+        <div class="w-full max-w-6xl px-6 mx-auto mt-6">
+            {{ $slot }}
         </div>
 
         <x-footer />
