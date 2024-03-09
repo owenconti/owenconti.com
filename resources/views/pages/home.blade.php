@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="flex flex-wrap items-center gap-12 flex-1 py-20">
-        <div class="flex-1">
+        <div class="flex-1 md:min-w-80">
             <div class="prose">
                 <h1>Hi, I'm Owen!</h1>
                 <p>I build applications for the web, with a focus on rapid iteration.</p>
@@ -9,7 +9,7 @@
                 <x-hero-button as="a" href="/articles">Read my articles</x-hero-button>
             </div>
         </div>
-        <div class="prose max-w-xl">
+        <div class="prose max-w-md">
             <div class="font-mono text-base dark:text-white text-zinc-700 bg-white rounded-t-lg px-4 py-2 border border-zinc-300 dark:border-zinc-800 z-10 relative dark:bg-black -mb-1">My Tech Stack</div>
             <pre class="m-0"><x-torchlight-code language='javascript'>
                 function backend() {
