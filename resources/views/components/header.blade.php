@@ -8,7 +8,7 @@
             <x-search class="flex-1 max-w-xs hidden md:flex" />
 
             <div class="flex items-center gap-2">
-                <div class="-my-2 -mr-2 hidden">
+                <div class="-my-2 -mr-2 md:hidden">
                     <x-button @click="isOpen = !isOpen">
                         <span class="sr-only">Open menu</span>
                         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
