@@ -19,14 +19,14 @@
         <p>Hopefully you found this article useful! If you did, share it on Twitter!</p>
         <div class="flex flex-wrap items-center gap-2">
             <a
-                class="bg-zinc-950 !text-white dark:bg-white dark:!text-zinc-950 px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-1 !no-underline hover:bg-zinc-900 dark:hover:bg-zinc-100"
+                class="bg-zinc-950 !text-white dark:bg-white dark:!text-zinc-950 px-4 py-2 rounded-lg rounded-tl-none rounded-br-none text-sm font-semibold flex items-center gap-1 !no-underline hover:bg-zinc-900 dark:hover:bg-zinc-100"
                 href="https://twitter.com/intent/post?related=owenconti&text={{ urlencode($page->title) }}%20by%20%40owenconti&url={{ urlencode(url()->current()) }}"
                 target="_blank"
             >
                 <x-twitter-icon class="w-4 h-4" /> Share this post
             </a>
             <a
-                class="bg-zinc-950 !text-white dark:bg-white dark:!text-zinc-950 px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-1 !no-underline hover:bg-zinc-900 dark:hover:bg-zinc-100"
+                class="bg-zinc-950 !text-white dark:bg-white dark:!text-zinc-950 px-4 py-2 rounded-lg rounded-tl-none rounded-br-none text-sm font-semibold flex items-center gap-1 !no-underline hover:bg-zinc-900 dark:hover:bg-zinc-100"
                 href="https://twitter.com/intent/follow?region=follow_link&screen_name=owenconti"
                 target="_blank"
             >
