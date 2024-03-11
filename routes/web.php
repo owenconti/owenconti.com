@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IndexPostsController;
-use App\Http\Controllers\ListCategoriesController;
 use App\Http\Controllers\ShowCategoryController;
 use App\Http\Controllers\ShowOgImageController;
 use App\Http\Controllers\ShowSearchResultsController;
