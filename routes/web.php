@@ -12,13 +12,11 @@ Route::feeds();
 
 Route::redirect('/category', '/articles');
 Route::redirect('/blog', '/articles');
-Route::redirect('/articles', '/posts');
-Route::redirect('/articles/{category}', '/posts/{category}');
 Route::redirect('/rss', '/feed');
 
 Route::get('/', HomeController::class);
-Route::get('/posts', IndexPostsController::class)->name('posts.index');
-Route::get('/posts/{category}', ShowCategoryController::class)->name('show.category');
+Route::get('/articles', IndexPostsController::class)->name('posts.index');
+Route::get('/articles/{category}', ShowCategoryController::class)->name('show.category');
 Route::get('/search', ShowSearchResultsController::class);
 Route::get('/og-image', ShowOgImageController::class);
 
