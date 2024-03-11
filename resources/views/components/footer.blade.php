@@ -1,4 +1,4 @@
-<footer class="max-w-6xl w-full mx-auto p-6 mt-12 border-t border-zinc-200 flex items-center justify-between dark:border-zinc-800">
+<footer class="max-w-6xl w-full mx-auto p-6 mt-12 border-t border-zinc-200 text-center md:text-left flex gap-4 flex-col-reverse md:flex-row items-center justify-between dark:border-zinc-800">
     <div>
         <p class="text-sm text-zinc-700 dark:text-zinc-500">
             &copy; Owen Conti. All rights reserved.
