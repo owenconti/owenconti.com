@@ -13,7 +13,7 @@ class ShowSearchResultsController extends Controller
         $query = $request->input('query', null);
 
         if (!$query) {
-            return redirect()->route('list.categories');
+            return redirect()->route('posts.index');
         }
 
         $results = Page::posts()

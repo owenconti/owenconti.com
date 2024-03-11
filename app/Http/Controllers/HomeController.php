@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function __invoke(): View
     {
         return view('pages.home', [
-            'articles' => Page::where('type', 'post')->limit(5)->orderByDesc('created_at')->get(),
+            'articles' => Page::where('type', 'post')->limit(5)->latest()->get(),
             'cards' => [
                 ['label' => 'Springloaded', 'description' => 'Springloaded is the software development studio I co-founded with Jeff Sagal in April 2022.', 'icon' => 'springloaded-icon', 'url' => 'https://springloaded.co'],
                 ['label' => 'YouTube', 'description' => 'I posted video versions of my articles on my YouTube channel.', 'icon' => 'youtube-icon', 'url' => 'https://youtube.com/owenconti'],

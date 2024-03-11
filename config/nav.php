@@ -2,7 +2,7 @@
 
 return [
     'main' => [
-        ['label' => 'Articles', 'url' => '/articles'],
+        ['label' => 'Articles', 'url' => '/posts'],
         // ['label' => 'Uses', 'url' => '/uses'],
     ],
     'links' => [

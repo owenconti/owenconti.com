@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndexPostsController;
 use App\Http\Controllers\ListCategoriesController;
 use App\Http\Controllers\ShowCategoryController;
 use App\Http\Controllers\ShowOgImageController;
@@ -11,11 +12,13 @@ Route::feeds();
 
 Route::redirect('/category', '/articles');
 Route::redirect('/blog', '/articles');
+Route::redirect('/articles', '/posts');
+Route::redirect('/articles/{category}', '/posts/{category}');
 Route::redirect('/rss', '/feed');
 
 Route::get('/', HomeController::class);
-Route::get('/articles', ListCategoriesController::class)->name('list.categories');
-Route::get('/articles/{category}', ShowCategoryController::class)->name('show.category');
+Route::get('/posts', IndexPostsController::class)->name('posts.index');
+Route::get('/posts/{category}', ShowCategoryController::class)->name('show.category');
 Route::get('/search', ShowSearchResultsController::class);
 Route::get('/og-image', ShowOgImageController::class);
 
