@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::feeds();
 
+Route::redirect('/analytics', '/');
 Route::redirect('/category', '/articles');
 Route::redirect('/blog', '/articles');
 Route::redirect('/rss', '/feed');
