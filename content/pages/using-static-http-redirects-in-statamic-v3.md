@@ -1,5 +1,5 @@
 ---
-slug: posts/2020-01-16.using-static-http-redirects-in-statamic-v3
+slug: posts/using-static-http-redirects-in-statamic-v3
 title: 'Using Static HTTP Redirects in Statamic v3'
 type: post
 category_slug: statamic
