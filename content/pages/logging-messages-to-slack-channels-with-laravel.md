@@ -12,7 +12,7 @@ If you're looking to send Slack notifications to your company's Slack channel wh
 
 ## Create a Slack webhook URL
 
-You'll need to create a webhook URL using a Slack app. You can follow Slack's [Sending your first Slack message](https://api.slack.com/tutorials/slack-apps-hello-world) guide.
+You'll need to create a webhook URL using a Slack app. You can follow Slack's [Sending your first Slack message](https://api.slack.com/tutorials/tracks/hello-world) guide.
 
 Once you've setup your new Slack app, create a new webhook URL and copy it your clipboard.
 
