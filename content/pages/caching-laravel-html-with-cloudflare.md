@@ -8,7 +8,7 @@ updated_at: 2021-08-17
 created_at: 2021-08-17
 ---
 
-If you're serving any sort of content site with Laravel, you've probably looked into setting up caching for your page responses. For this site [owenconti.com](owenconti.com), I'm letting Cloudflare handle the caching for me. I do this by setting up a Page Rule to "cache everything":
+If you're serving any sort of content site with Laravel, you've probably looked into setting up caching for your page responses. For this site [owenconti.com](https://owenconti.com), I'm letting Cloudflare handle the caching for me. I do this by setting up a Page Rule to "cache everything":
 
 ![Cloudflare page rule to cache everything](/assets/cloudflare-page-rule-for-caching-everything.png)
 
