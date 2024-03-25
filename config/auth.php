@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'guards' => [
         'api' => [
             'driver' => 'token',
@@ -9,5 +8,4 @@ return [
             'hash' => false,
         ],
     ],
-
 ];
