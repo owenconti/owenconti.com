@@ -3,29 +3,28 @@
 @import 'tailwindcss/utilities';
 
 .input {
-  @apply py-2 px-3 bg-white border-2 border-zinc-400 focus:border-zinc-500 focus:outline-none rounded;
+  @apply py-2 px-3 bg-white border-2 border-gray-400 focus:border-gray-500 focus:outline-none rounded;
 }
 
 /*! purgecss start ignore */
 .prose {
   --tw-prose-pre-bg: theme('colors.zinc.800');
 
-  @apply text-base font-medium text-zinc-700 max-w-full leading-relaxed;
+  @apply text-base font-medium text-gray-700 max-w-full leading-relaxed;
 
   .torchlight, pre, pre code {
     @apply font-code text-sm p-0;
   }
 
   .torchlight {
-    @apply px-1 pt-2 block min-h-full;
-    background: none !important;
+    @apply px-1 pt-2 block min-h-full !bg-gray-900;
     min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
 
     &::after {
       content: 'Code highlighting by torchlight.dev';
-      @apply block text-[10px] pt-px pl-2 clear-both text-zinc-600;
+      @apply block text-[10px] pt-px pl-2 clear-both text-gray-600;
     }
 
     &.has-focus-lines {
@@ -40,12 +39,12 @@
     }
 
     .line-number {
-      @apply pr-2 pl-1 text-zinc-600 !important;
+      @apply pr-2 pl-1 text-gray-600 !important;
     }
   }
 
   code {
-    @apply bg-zinc-100 px-2 py-0.5 font-semibold rounded font-code;
+    @apply bg-gray-100 px-2 py-0.5 font-semibold rounded font-code;
 
     &::before, &::after {
         @apply hidden;
@@ -53,10 +52,10 @@
   }
 
   a {
-    @apply text-zinc-800 font-bold underline hover:text-zinc-700;
+    @apply text-gray-800 font-bold underline hover:text-gray-700;
 
     &.heading-permalink {
-      @apply invisible text-zinc-300 absolute no-underline hover:underline hover:text-zinc-400 transform -translate-x-full pr-2;
+      @apply invisible text-gray-300 absolute no-underline hover:underline hover:text-gray-400 transform -translate-x-full pr-2;
     }
   }
 
@@ -73,7 +72,7 @@
   }
 
   blockquote {
-    @apply p-4 my-6 mx-0 text-zinc-800 bg-zinc-100 border-l-8 border-zinc-300 space-y-2;
+    @apply p-4 my-6 mx-0 text-gray-800 bg-gray-100 border-l-8 border-gray-300 space-y-2;
 
     p {
       @apply m-0 p-0;
@@ -85,11 +84,11 @@
   }
 
   .table-of-contents {
-    @apply mb-8 p-0 pb-4 border-b border-zinc-300;
+    @apply mb-8 p-0 pb-4 border-b border-gray-300;
 
     &::before {
       content: 'Quick links';
-      @apply font-bold text-zinc-900;
+      @apply font-bold text-gray-900;
     }
 
     li {
@@ -132,15 +131,15 @@ html.dark {
     }
 
     a {
-      @apply text-zinc-100 hover:text-zinc-300;
+      @apply text-gray-100 hover:text-gray-300;
 
       &.heading-permalink {
-        @apply text-zinc-600 hover:text-zinc-700;
+        @apply text-gray-600 hover:text-gray-700;
       }
     }
 
     code {
-      @apply bg-zinc-800 text-zinc-200 rounded;
+      @apply bg-gray-800 text-gray-200 rounded;
     }
 
     strong {
@@ -148,14 +147,14 @@ html.dark {
     }
 
     blockquote {
-      @apply bg-zinc-800 text-zinc-100 border-zinc-700;
+      @apply bg-gray-800 text-gray-100 border-gray-700;
     }
 
     .table-of-contents {
-      @apply border-zinc-700;
+      @apply border-gray-700;
 
       &::before {
-        @apply text-zinc-100;
+        @apply text-gray-100;
       }
     }
   }

@@ -1,4 +1,4 @@
-<header x-data="{ isOpen: false }" class="w-full border-t-4 border-zinc-900">
+<header x-data="{ isOpen: false }" class="w-full border-t-4 border-gray-900">
     <div class="w-full max-w-6xl px-6 mx-auto">
         <div class="flex items-center justify-between py-6 md:justify-between md:space-x-10 gap-8">
             <a href="/" class="flex items-center justify-between">

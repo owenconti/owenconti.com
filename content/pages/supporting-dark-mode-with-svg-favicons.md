@@ -48,7 +48,7 @@ The above SVG snippet is the favicon I use on this website. You can see I'm usin
 
 Here's that same SVG snippet from above, embedded into the page. Switch your OS between light and dark mode to see the SVG change color. If you want to see the favicon change, you'll need to refresh the page after changing your color scheme.
 
-<div class="bg-zinc-200">
+<div class="bg-gray-200">
   <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" id="favicon-demo">
     <style>
       #favicon-demo path {
