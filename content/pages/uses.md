@@ -1,12 +1,14 @@
 ---
-slug: /uses
+slug: pages/uses
 title: 'Uses'
 type: page
-updated_at: 2024-03-15
+updated_at: 2024-04-05
 created_at: 2024-03-15
 ---
 
 This Uses page covers the current hardware and software I use on a daily basis. 
+
+***Note**: All of these links are affiliate links with Amazon.*
 
 ## Hardware
 
@@ -30,23 +32,19 @@ This Uses page covers the current hardware and software I use on a daily basis.
 - Neewer 18" Ring Light
 - ElectroVoice RE320 microphone
 - M-Audio M-Track 2x2M Audio Interface
-- DBX 286s Processors
+- DBX 286s Audio Processor
 
 ## Software
 
 ### Software development
 
-- Neovim - dotfiles here
+- Neovim: [config files](https://github.com/owenconti/neovim-config)
 - Wezterm
 - TablePlus
 
 ### General productivity
 
-- Arc
-- Linear
+- Arc, for browsing
+- Linear, for project management
 - Apple Notes
 - Apple Reminders
-
-
-
-

@@ -1,5 +1,5 @@
 ---
-slug: /bookmarks
+slug: pages/bookmarks
 title: 'Bookmarks'
 type: page
 updated_at: 2024-03-14
