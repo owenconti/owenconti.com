@@ -37,11 +37,6 @@ class GenerateSitemap extends Command
                     ->setPriority(1.0)
             )
             ->add(
-                Url::create('/analytics')
-                    ->setLastModificationDate(now())
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
-            )
-            ->add(
                 Url::create('/articles')
                     ->setLastModificationDate(now())
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
