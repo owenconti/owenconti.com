@@ -1,11 +1,11 @@
-<div {{ $attributes->merge(['class' => 'mt-1 text-sm text-zinc-500 flex items-center dark:text-zinc-400']) }}>
+<div {{ $attributes->merge(['class' => 'mt-1 text-sm text-gray-500 flex items-center dark:text-gray-400']) }}>
     <p>
         Posted on
         <time datetime="{{ $article->updated_at->format('Y-m-d') }}">{{ $article->updated_at->format('M d, Y') }}</time>
         @if($article->category)
-            under <a href="{{ $article->category->url }}" class="font-bold text-zinc-800 dark:text-white hover:underline">{{ $article->category->title }}</a>
+            under <a href="{{ $article->category->url }}" class="font-bold text-gray-800 dark:text-white hover:underline">{{ $article->category->title }}</a>
         @endif
-        by <a href="https://owenconti.com" class="font-bold text-zinc-800 dark:text-white hover:underline">Owen Conti</a>.
+        by <a href="https://owenconti.com" class="font-bold text-gray-800 dark:text-white hover:underline">Owen Conti</a>.
     </p>
 
     @if ($article->video)

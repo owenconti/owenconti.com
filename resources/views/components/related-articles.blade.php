@@ -5,7 +5,7 @@
     @foreach($relatedArticles as $article)
     <h3>
       <a href="{{ $article->url }}"
-        class="text-sm font-medium hover:underline text-zinc-800 hover:text-zinc-700 dark:text-zinc-200 dark:hover:text-zinc-100">
+        class="text-sm font-medium hover:underline text-gray-800 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100">
         {{ $article->title}}
       </a>
     </h3>

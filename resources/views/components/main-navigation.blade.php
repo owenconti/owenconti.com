@@ -5,15 +5,15 @@
             href="{{ $item['url'] }}"
             @class([
                 'font-semibold',
-                '!text-zinc-900 dark:!text-white' => !!$item['active'],
-                '!text-zinc-700 hover:!text-zinc-900 dark:!text-zinc-400 dark:hover:!text-white' => !$item['active']
+                '!text-gray-900 dark:!text-white' => !!$item['active'],
+                '!text-gray-700 hover:!text-gray-900 dark:!text-gray-400 dark:hover:!text-white' => !$item['active']
             ])
         >{{ $item['label'] }}</x-button>
     @endforeach
 </nav>
 
 <div v-cloak class="inset-x-0 top-0 z-10 px-6 mt-6 transition origin-top-right md:hidden" :class="{ 'fixed' : isOpen , 'hidden' : !isOpen}" >
-    <div class="relative bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-zinc-900 divide-zinc-50 dark:shadow-zinc-800">
+    <div class="relative bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-gray-900 divide-gray-50 dark:shadow-gray-800">
         <div class="px-5 pt-5 pb-6">
             <div class="absolute top-0 right-0 mt-3 mr-3">
                 <x-button @click="isOpen = !isOpen">
@@ -28,12 +28,12 @@
                 @foreach($items as $item)
                     <a
                         href="{{ $item['url'] }}"
-                        class="block text-base text-zinc-700 hover:underline hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100"
+                        class="block text-base text-gray-700 hover:underline hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                     >{{ $item['label'] }}</a>
                 @endforeach
             </nav>
 
-            <div class="pt-4 mt-4 border-t border-zinc-300">
+            <div class="pt-4 mt-4 border-t border-gray-300">
                 <x-search />
             </div>
         </div>
