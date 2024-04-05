@@ -9,11 +9,11 @@
 
 <body>
     <div
-        class="w-[1200px] h-[632px] relative flex items-center justify-center px-4 text-center text-white border-4 bg-zinc-900">
+        class="w-[1200px] h-[632px] relative flex items-center justify-center px-4 text-center text-white border-4 bg-gray-900">
         <div>
-            <h1 class="px-6 py-4 text-5xl font-bold text-white bg-zinc-800 leading-normal rounded-3xl rounded-tl-none rounded-br-none">{{ $title }}</h1>
+            <h1 class="px-6 py-4 text-5xl font-bold text-white bg-gray-800 leading-normal rounded-3xl rounded-tl-none rounded-br-none">{{ $title }}</h1>
             @if ($excerpt ?? null)
-                <p class="inline-block p-4 mt-8 text-lg text-white border-l-4 border-zinc-700 bg-zinc-800">{{ $excerpt }}</p>
+                <p class="inline-block p-4 mt-8 text-lg text-white border-l-4 border-gray-700 bg-gray-800">{{ $excerpt }}</p>
             @endif
         </div>
 

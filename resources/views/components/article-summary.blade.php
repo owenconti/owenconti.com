@@ -2,7 +2,7 @@
     <h2>
         <a
             href="{{ $article->url }}"
-            class="text-xl font-bold hover:underline text-zinc-800 hover:text-zinc-700 dark:text-zinc-100 dark:hover:text-zinc-200"
+            class="text-xl font-bold hover:underline text-gray-800 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-200"
         >
             {{ $article->title}}
         </a>

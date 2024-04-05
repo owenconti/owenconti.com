@@ -18,8 +18,8 @@ With the above example, the `div` will be scaled 150%, rotated 45 degrees, trans
 
 Check these out, all default Tailwind utilities!
 
-<div class="p-4 pt-3 mb-4 bg-white border border-zinc-300 rounded shadow-inner dark:border-zinc-600 dark:bg-zinc-900">
-  <div class="m-0 mb-4 font-normal tracking-widest text-zinc-400 font-heading dark:text-zinc-500">
+<div class="p-4 pt-3 mb-4 bg-white border border-gray-300 rounded shadow-inner dark:border-gray-600 dark:bg-gray-900">
+  <div class="m-0 mb-4 font-normal tracking-widest text-gray-400 font-heading dark:text-gray-500">
     Example
   </div>
   
@@ -42,8 +42,8 @@ Check these out, all default Tailwind utilities!
 
 You can even combine these with CSS transitions ([read more about that here](/posts/using-css-transitions-with-tailwindcss-1-2)):
 
-<div class="p-4 pt-3 mb-4 bg-white border border-zinc-300 rounded shadow-inner dark:border-zinc-600 dark:bg-zinc-900">
-  <div class="m-0 mb-4 font-normal tracking-widest text-zinc-400 font-heading dark:text-zinc-500">
+<div class="p-4 pt-3 mb-4 bg-white border border-gray-300 rounded shadow-inner dark:border-gray-600 dark:bg-gray-900">
+  <div class="m-0 mb-4 font-normal tracking-widest text-gray-400 font-heading dark:text-gray-500">
     Example
   </div>
   <div>
