@@ -9,30 +9,30 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "archtechx/laravel-pages": "^0.2",
+        "archtechx/laravel-pages": "^0.3",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.48",
         "laravel/tinker": "^2.8",
-        "laravel/vapor-cli": "^1.64",
+        "laravel/vapor-cli": "^1.65",
         "laravel/vapor-core": "^2.37",
         "league/commonmark": "^2.4",
-        "league/flysystem-aws-s3-v3": "^3.24",
-        "lorisleiva/laravel-actions": "^2.7",
+        "league/flysystem-aws-s3-v3": "^3.28",
+        "lorisleiva/laravel-actions": "^2.8",
         "spatie/laravel-feed": "^4.4",
         "spatie/laravel-sitemap": "^6.2",
         "spatie/once": "^3.1",
-        "tightenco/ziggy": "^2.0",
+        "tightenco/ziggy": "^2.2",
         "torchlight/torchlight-commonmark": "^0.5.5",
-        "torchlight/torchlight-laravel": "^0.5.14"
+        "torchlight/torchlight-laravel": "^0.6"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
-        "friendsofphp/php-cs-fixer": "^3.51",
+        "friendsofphp/php-cs-fixer": "^3.58",
         "laravel/sail": "^1.25",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^10.1",
-        "squizlabs/php_codesniffer": "^3.9",
+        "squizlabs/php_codesniffer": "^3.10",
         "spatie/laravel-ignition": "^2.0"
     },
     "autoload": {
