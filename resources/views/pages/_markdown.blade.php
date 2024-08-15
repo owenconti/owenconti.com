@@ -4,7 +4,7 @@
         <x-article-metadata :article="$page" class="mt-2" />
     </div>
 
-    <div class="mt-8 prose prose-gray-800 dark:prose-gray-100">
+    <div class="mt-8 prose prose-gray-800 dark:prose-gray-100 {{ $page->hide_toc ? 'hide-toc' : null }}">
         {!! $content !!}
 
         @if($page->video)
