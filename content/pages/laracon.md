@@ -22,6 +22,8 @@ If you're reading this, then we've probably talked at [Laracon](https://laracon.
 
 ## Get in touch!
 
-- You can find me on Twitter at [@owenconti](https://twitter.com/owenconti)
+- You can find me on X at [@owenconti](https://twitter.com/owenconti)
 - I'm also on GitHub at [@owenconti](https://github.com/owenconti)
 - Connect with me on [LinkedIn](https://www.linkedin.com/in/owenconti/)
+
+<x-newsletter-form />

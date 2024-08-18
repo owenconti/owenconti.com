@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\BladeParsingExtension;
+use App\Models\Page;
 use App\VaporAssetWrapping;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
@@ -47,6 +49,7 @@ class PageController
 
         return view(config('pages.views.markdown'), [
             'content' => $content,
+            'recent_articles' => Page::where('type', 'post')->limit(5)->latest()->get(),
         ]);
     }
 
@@ -58,6 +61,7 @@ class PageController
             ],
         ]);
         $environment->addExtension(new CommonMarkCoreExtension())
+            ->addExtension(new BladeParsingExtension())
             ->addExtension(new TorchlightExtension())
             ->addExtension(new VaporAssetWrapping())
             ->addExtension(new HeadingPermalinkExtension())
