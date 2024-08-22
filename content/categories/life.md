@@ -1,0 +1,4 @@
+---
+slug: life
+title: Life
+---

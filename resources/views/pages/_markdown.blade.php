@@ -4,7 +4,7 @@
         <x-article-metadata :article="$page" class="mt-2" />
     </div>
 
-    <div class="mt-8 prose prose-gray-800 dark:prose-gray-100">
+    <div class="mt-8 prose prose-gray-800 dark:prose-gray-100 {{ $page->hide_toc ? 'hide-toc' : null }}">
         {!! $content !!}
 
         @if($page->video)
@@ -16,7 +16,7 @@
         <hr class="my-8 border-t-0 border-b border-gray-200 dark:border-gray-700" />
 
         <h3 class="text-lg font-bold">Thanks for reading this article!</h3>
-        <p>Hopefully you found this article useful! If you did, share it on Twitter!</p>
+        <p>Hopefully you found this article useful! If you did, share it on X!</p>
         <div class="flex flex-wrap items-center gap-2">
             <a
                 class="bg-gray-950 !text-white dark:bg-white dark:!text-gray-950 px-4 py-2 rounded-lg rounded-tl-none rounded-br-none text-sm font-semibold flex items-center gap-1 !no-underline hover:bg-gray-900 dark:hover:bg-gray-100"

@@ -11,6 +11,10 @@ use Spatie\Feed\FeedItem;
 
 class Page extends BasePage implements Feedable
 {
+    protected $casts = [
+        'hide_toc' => 'boolean',
+    ];
+
     protected static function booted()
     {
         static::addGlobalScope('published', function (Builder $builder) {
@@ -41,6 +45,7 @@ class Page extends BasePage implements Feedable
         $table->longText('content');
         $table->text('excerpt')->nullable();
         $table->string('type');
+        $table->boolean('hide_toc')->default(false)->nullable();
         $table->string('video')->nullable();
         $table->string('category_slug')->nullable();
         $table->boolean('draft')->nullable()->default(false);

@@ -83,6 +83,10 @@
     }
   }
 
+  &.hide-toc .table-of-contents {
+    @apply hidden;
+  }
+
   .table-of-contents {
     @apply mb-8 p-0 pb-4 border-b border-gray-300;
 

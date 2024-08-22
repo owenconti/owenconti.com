@@ -10,7 +10,7 @@
 
     <div class="flex justify-center gap-6">
         @foreach($nav['links'] as $link)
-            <a href="{{ $link['url'] }}" class="text-gray-800 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100">
+            <a href="{{ $link['url'] }}" class="text-gray-800 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-100" aria-label="{{ $link['label'] }}">
                 <x-dynamic-component :component="$link['component']" class="w-6 h-6" />
             </a>
         @endforeach
