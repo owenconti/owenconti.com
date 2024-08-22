@@ -12,13 +12,17 @@ created_at: 2024-08-14T19:09:02+00:00
 If you are reading this, then we have likely met at Laracon in Dallas! Here is some more information about me and what I do:
 
 - My name is Owen Conti, and I live in Canada.
-- I have an amazing wife and two kids, ages 5 and 3. We recently returned from an 11-day road trip in our motorhome, and it was fantastic!
-- I am a co-founder of Springloaded, a software development studio where we specialize in custom applications for our clients.
+- I have an [amazing wife](https://www.instagram.com/jess.the.nurse/) and two kids, ages 5 and 3. We recently returned from an 11-day road trip in our motorhome, and it was fantastic!
+- I am a co-founder of [Springloaded](https://springloaded.co/), a software development studio where we specialize in custom applications for our clients.
+
+Springloaded is giving away a few Apple accessories for Laracon attendees. If you are interested in entering the draw, check out the page below:
+
+[Springloaded + Laracon Giveaway](https://springloaded.co/laracon)
 
 ## Tech stack:
 
 - My preferred tech stack includes Laravel, Inertia (feel free to ask me about Hybridly!), React or Vue.js (I prefer React), Tailwind CSS, and PostgreSQL.
-- Although I prefer the Inertia stack, I still see value in and use Livewire/Blade for some of my projects.
+- Although I prefer the Inertia stack, I still see value in (and use) Livewire/Blade for some of my projects.
 
 ## Get in touch!
 
