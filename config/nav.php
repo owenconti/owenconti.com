@@ -3,7 +3,7 @@
 return [
     'main' => [
         ['label' => 'Articles', 'url' => '/articles'],
-        // ['label' => 'Uses', 'url' => '/uses'],
+        ['label' => '/uses', 'url' => '/pages/uses'],
     ],
     'links' => [
         ['component' => 'springloaded-icon', 'label' => 'Springloaded', 'url' => 'https://springloaded.co'],
