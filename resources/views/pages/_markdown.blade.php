@@ -1,10 +1,19 @@
 <x-two-column-layout>
-    <div>
-        <h1 class="text-4xl font-bold">{{ $page->title }}</h1>
-        <x-article-metadata :article="$page" class="mt-2" />
+    <div class="flex items-end">
+        <div class="flex-1">
+            <h1 class="text-4xl font-bold">{{ $page->title }}</h1>
+            <x-article-metadata :article="$page" class="mt-2" />
+        </div>
+
+        <button type="button" class="open-toc flex items-center gap-2 font-semibold text-sm text-gray-700 hover:text-gray-900 dark:text-gray-400 hover:dark:text-gray-300">
+            Quick links
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 rotate-90">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
     </div>
 
-    <div class="mt-8 prose prose-gray-800 dark:prose-gray-100 {{ $page->hide_toc ? 'hide-toc' : null }}">
+    <div class="relative mt-8 prose prose-gray-800 dark:prose-gray-100 {{ $page->hide_toc ? 'hide-toc' : null }}">
         {!! $content !!}
 
         @if($page->video)

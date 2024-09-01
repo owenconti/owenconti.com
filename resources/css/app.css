@@ -88,19 +88,18 @@
   }
 
   .table-of-contents {
-    @apply mb-8 p-0 pb-4 border-b border-gray-300;
-
-    &::before {
-      content: 'Quick links';
-      @apply font-bold text-gray-900;
-    }
+    @apply hidden -mt-4 p-2 text-sm border border-gray-200/50 dark:border-gray-800/25 bg-white dark:bg-gray-950 shadow absolute top-0 right-0;
 
     li {
-      @apply ml-8;
+      @apply list-none;
 
       p, ul {
         @apply m-0 p-0;
       }
+    }
+
+    ul li {
+        @apply pl-4;
     }
 
     a {
