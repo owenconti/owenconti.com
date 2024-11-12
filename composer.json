@@ -10,7 +10,7 @@
     "require": {
         "php": "^8.2",
         "archtechx/laravel-pages": "^0.3",
-        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/guzzle": "^7.9",
         "laravel/framework": "^10.48",
         "laravel/tinker": "^2.8",
         "laravel/vapor-cli": "^1.65",
@@ -27,7 +27,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
-        "friendsofphp/php-cs-fixer": "^3.60",
+        "friendsofphp/php-cs-fixer": "^3.64",
         "laravel/sail": "^1.25",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
