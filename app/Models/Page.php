@@ -27,7 +27,7 @@ class Page extends BasePage implements Feedable
         return FeedItem::create()
             ->id($this->slug)
             ->title($this->title)
-            ->summary($this->excerpt)
+            ->summary($this->excerpt ?? '')
             ->updated($this->updated_at)
             ->link($this->url)
             ->authorName('Owen Conti');
